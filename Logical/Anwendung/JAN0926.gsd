@@ -1,0 +1,107 @@
+;==========================================================
+; GSD-File  for UMG507           Janitza electronics GmbH
+; Auto_Baud_supp, 1.5MBaud
+;
+; Stand : 12.06.2006
+; File    : JAN0926.GSD
+;===========================================================
+#Profibus_DP
+; Unit-Definition-List:
+GSD_Revision=2
+Vendor_Name="Janitza electronics GmbH"
+Model_Name="UMG507"
+Revision="Rev. 3"
+Revision_Number=3
+Ident_Number=0x0926
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="1.00"
+Software_Release="1.00"
+9.6_supp = 1
+19.2_supp = 1
+45.45_supp = 1
+93.75_supp = 1
+187.5_supp = 1
+500_supp = 1
+1.5M_supp = 1
+MaxTsdr_9.6 = 15
+MaxTsdr_19.2 = 15
+MaxTsdr_45.45 = 15
+MaxTsdr_93.75 = 15
+MaxTsdr_187.5 = 15
+MaxTsdr_500 = 15
+MaxTsdr_1.5M = 25
+Repeater_Ctrl_Sig = 0
+Implementation_Type="SPC3"
+Bitmap_Device="DP_NORM"
+;
+; Slave-Specification:
+;
+Freeze_Mode_supp=0
+Sync_Mode_supp = 0
+Auto_Baud_supp = 1
+Set_Slave_Add_supp = 0
+Min_Slave_Intervall=1
+Max_Diag_Data_Len=6
+Slave_Family=0
+User_Prm_Data_Len=0
+;
+Modular_Station = 1
+Max_Module=8
+Max_Input_Len=128
+Max_Output_Len=6
+Max_Data_Len=134
+;
+;
+; Module-Definitions:
+;
+
+Module = "STD:  8 Word In, 1 Byte Out" 0x57,0x20
+1
+EndModule
+
+Module = "STD: 16 Word In, 1 Byte Out" 0x5f,0x20
+2
+EndModule
+
+Module = "STD: 32 Word In, 1 Byte Out" 0xc0,0x00,0x5f
+3
+EndModule
+
+Module = "STD: 64 Word In, 1 Byte Out" 0xc0,0x00,0x7f
+4
+EndModule
+
+Module = "STD:  8 Word In, 2 Byte Out" 0x57,0x21
+5
+EndModule
+
+Module = "STD: 16 Word In, 2 Byte Out" 0x5f,0x21
+6
+EndModule
+
+Module = "STD: 32 Word In, 2 Byte Out" 0xc0,0x01,0x5f
+7
+EndModule
+
+Module = "STD: 64 Word In, 2 Byte Out" 0xc0,0x01,0x7f
+8
+EndModule
+
+Module = "STD:  8 Word In, 6 Byte Out" 0x57,0x25
+9
+EndModule
+
+Module = "STD: 16 Word In, 6 Byte Out" 0x5f,0x25
+10
+EndModule
+
+Module = "STD: 32 Word In, 6 Byte Out" 0xc0,0x05,0x5f
+11
+EndModule
+
+Module = "STD: 64 Word In, 6 Byte Out" 0xc0,0x05,0x7f
+12
+EndModule
+
+

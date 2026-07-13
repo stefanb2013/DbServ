@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Transfer xmlns="http://br-automation.co.at/AS/Transfer">
+  <OperatingSystem Version="6.7.6" />
+  <Hardware Target="SG4" />
+  <Operation Download="ashwd.br" Memory="SystemROM" />
+  <Operation Download="asfw.br" Memory="SystemROM" />
+  <Operation Download="arconfig.br" Memory="SystemROM" />
+  <Operation Download="sysconf.br" Memory="SystemROM" />
+  <Operation Restart="warm" />
+  <Operation Download="dplist.br" Memory="UserROM" />
+  <Operation Download="typlist.br" Memory="UserROM" />
+  <Operation Download="TCData.br" Memory="SystemROM" />
+  <Operation Download="udbdef.br" Memory="UserROM" />
+  <Operation Download="iomap.br" Memory="UserROM" />
+  <Operation Download="ashwac.br" Memory="UserROM" />
+  <Operation Download="standard.br" Memory="UserROM" />
+  <Operation Download="runtime.br" Memory="UserROM" />
+  <Operation Download="OPERATOR.br" Memory="UserROM" />
+  <Operation Download="AsBrStr.br" Memory="UserROM" />
+  <Operation Download="FileIO.br" Memory="UserROM" />
+  <Operation Download="sys_lib.br" Memory="UserROM" />
+  <Operation Download="AsIecCon.br" Memory="UserROM" />
+  <Operation Download="dbslib.br" Memory="UserROM" />
+  <Operation Download="DataObj.br" Memory="UserROM" />
+  <Operation Download="astime.br" Memory="UserROM" />
+  <Operation Download="dvframe.br" Memory="UserROM" />
+  <Operation Download="brsystem.br" Memory="UserROM" />
+  <Operation Download="IEC103Ut.br" Memory="UserROM" />
+  <Operation Download="ethsock.br" Memory="UserROM" />
+  <Operation Download="CAN_Lib.br" Memory="UserROM" />
+  <Operation Download="AsHW.br" Memory="UserROM" />
+  <Operation Download="ArEventLog.br" Memory="UserROM" />
+  <Operation Download="io.br" Memory="UserROM" />
+  <Operation Download="kupplung.br" Memory="UserROM" />
+  <Operation Download="anlage.br" Memory="UserROM" />
+  <Operation Download="iec103.br" Memory="UserROM" />
+  <Operation Download="iodrv.br" Memory="UserROM" />
+  <Operation Download="dbsevent.br" Memory="UserROM" />
+  <Operation Download="iec103Cmd.br" Memory="UserROM" />
+  <Operation Download="def.br" Memory="UserROM" />
+  <Operation Download="Lebensbit.br" Memory="UserROM" />
+  <Operation Download="zaehler.br" Memory="UserROM" />
+  <Operation Download="dbstcp.br" Memory="UserROM" />
+  <Operation Download="dbserv.br" Memory="UserROM" />
+  <Operation Download="dbsmon.br" Memory="UserROM" />
+  <Operation Download="dbstest.br" Memory="UserROM" />
+</Transfer>

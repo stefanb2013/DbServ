@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.30 SP12?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC" Description="Rangierung Kupplung SS2 von UMG SS1">kupplung</Object>
+    <Object Type="DataObject" Language="Simple" Description="DbServ Datenpunktliste">dplist</Object>
+    <Object Type="DataObject" Language="Simple" Description="DbServ Datentypliste">typlist</Object>
+    <Object Type="Program" Language="IEC" Description="Musteranlage">anlage</Object>
+    <Object Type="File" Description="GSD-Dateui für UMG503">JAN0926.gsd</Object>
+    <Object Type="File" Description="Konfiguration für Test mit UMG">dpm_099.br</Object>
+  </Objects>
+</Package>

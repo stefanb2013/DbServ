@@ -1,0 +1,1240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="6.5.3.11"?>
+<Objects>
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Package.pkg"
+    LogicalPath=""
+    Type="Package.ParentUnknown"
+    LastWriteTime="134281469125189833" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\version\Simple.dob"
+    LogicalPath="version"
+    Type="DataObject"
+    LastWriteTime="131920228580000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\version\version.dat"
+    LogicalPath="version.version.dat"
+    Type="File"
+    LastWriteTime="133338007976652494"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Global.typ"
+    LogicalPath="Global.typ"
+    Type="File"
+    LastWriteTime="130194913060000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\Package.pkg"
+    LogicalPath="Libraries"
+    Type="Package"
+    LastWriteTime="134281593256516635" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\ETHSOCK\Binary.lby"
+    LogicalPath="Libraries.ETHSOCK"
+    Type="Library"
+    LastWriteTime="134259830700000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\ETHSOCK\EthSock.fun"
+    LogicalPath="Libraries.ETHSOCK.EthSock.fun"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\ETHSOCK\EthSock.typ"
+    LogicalPath="Libraries.ETHSOCK.EthSock.typ"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\ETHSOCK\EthSock.var"
+    LogicalPath="Libraries.ETHSOCK.EthSock.var"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\sys_lib\Binary.lby"
+    LogicalPath="Libraries.sys_lib"
+    Type="Library"
+    LastWriteTime="134259830700000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\sys_lib\sys_lib.fun"
+    LogicalPath="Libraries.sys_lib.sys_lib.fun"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\sys_lib\sys_lib.typ"
+    LogicalPath="Libraries.sys_lib.sys_lib.typ"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\sys_lib\sys_lib.var"
+    LogicalPath="Libraries.sys_lib.sys_lib.var"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\runtime\Binary.lby"
+    LogicalPath="Libraries.runtime"
+    Type="Library"
+    LastWriteTime="134259830700000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\runtime\runtime.fun"
+    LogicalPath="Libraries.runtime.runtime.fun"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\runtime\runtime.typ"
+    LogicalPath="Libraries.runtime.runtime.typ"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\runtime\runtime.var"
+    LogicalPath="Libraries.runtime.runtime.var"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\standard\Binary.lby"
+    LogicalPath="Libraries.standard"
+    Type="Library"
+    LastWriteTime="134259830700000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\standard\standard.fun"
+    LogicalPath="Libraries.standard.standard.fun"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\standard\standard.typ"
+    LogicalPath="Libraries.standard.standard.typ"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\standard\standard.var"
+    LogicalPath="Libraries.standard.standard.var"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\operator\Binary.lby"
+    LogicalPath="Libraries.operator"
+    Type="Library"
+    LastWriteTime="134259830700000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\operator\operator.fun"
+    LogicalPath="Libraries.operator.operator.fun"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\operator\operator.typ"
+    LogicalPath="Libraries.operator.operator.typ"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\operator\operator.var"
+    LogicalPath="Libraries.operator.operator.var"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\FileIO\Binary.lby"
+    LogicalPath="Libraries.FileIO"
+    Type="Library"
+    LastWriteTime="134259830700000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\FileIO\FileIO.fun"
+    LogicalPath="Libraries.FileIO.FileIO.fun"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\FileIO\FileIO.typ"
+    LogicalPath="Libraries.FileIO.FileIO.typ"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\FileIO\FileIO.var"
+    LogicalPath="Libraries.FileIO.FileIO.var"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\dvframe\Binary.lby"
+    LogicalPath="Libraries.dvframe"
+    Type="Library"
+    LastWriteTime="134259830700000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\dvframe\dvframe.fun"
+    LogicalPath="Libraries.dvframe.dvframe.fun"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\dvframe\dvframe.typ"
+    LogicalPath="Libraries.dvframe.dvframe.typ"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\dvframe\dvframe.var"
+    LogicalPath="Libraries.dvframe.dvframe.var"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\DPMaster\Binary.lby"
+    LogicalPath="Libraries.DPMaster"
+    Type="Library"
+    LastWriteTime="132633771900000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\DPMaster\DPMaster.fun"
+    LogicalPath="Libraries.DPMaster.DPMaster.fun"
+    Type="File"
+    LastWriteTime="132633771900000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\DPMaster\DPMaster.typ"
+    LogicalPath="Libraries.DPMaster.DPMaster.typ"
+    Type="File"
+    LastWriteTime="132633771900000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\DPMaster\DPMaster.var"
+    LogicalPath="Libraries.DPMaster.DPMaster.var"
+    Type="File"
+    LastWriteTime="132633771900000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\DataObj\Binary.lby"
+    LogicalPath="Libraries.DataObj"
+    Type="Library"
+    LastWriteTime="134259830680000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\DataObj\DataObj.fun"
+    LogicalPath="Libraries.DataObj.DataObj.fun"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\DataObj\DataObj.typ"
+    LogicalPath="Libraries.DataObj.DataObj.typ"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\DataObj\DataObj.var"
+    LogicalPath="Libraries.DataObj.DataObj.var"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\CAN_Lib\Binary.lby"
+    LogicalPath="Libraries.CAN_Lib"
+    Type="Library"
+    LastWriteTime="134259830680000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\CAN_Lib\CAN_Lib.fun"
+    LogicalPath="Libraries.CAN_Lib.CAN_Lib.fun"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\CAN_Lib\CAN_Lib.typ"
+    LogicalPath="Libraries.CAN_Lib.CAN_Lib.typ"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\CAN_Lib\CAN_Lib.var"
+    LogicalPath="Libraries.CAN_Lib.CAN_Lib.var"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\brsystem\Binary.lby"
+    LogicalPath="Libraries.brsystem"
+    Type="Library"
+    LastWriteTime="134259830700000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\brsystem\brsystem.fun"
+    LogicalPath="Libraries.brsystem.brsystem.fun"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\brsystem\brsystem.typ"
+    LogicalPath="Libraries.brsystem.brsystem.typ"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\brsystem\brsystem.var"
+    LogicalPath="Libraries.brsystem.brsystem.var"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\astime\Binary.lby"
+    LogicalPath="Libraries.astime"
+    Type="Library"
+    LastWriteTime="134259830700000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\astime\astime.fun"
+    LogicalPath="Libraries.astime.astime.fun"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\astime\astime.typ"
+    LogicalPath="Libraries.astime.astime.typ"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\astime\astime.var"
+    LogicalPath="Libraries.astime.astime.var"
+    Type="File"
+    LastWriteTime="134259830700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\AsBrStr\Binary.lby"
+    LogicalPath="Libraries.AsBrStr"
+    Type="Library"
+    LastWriteTime="134259830680000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\AsBrStr\AsBrStr.fun"
+    LogicalPath="Libraries.AsBrStr.AsBrStr.fun"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\AsBrStr\AsBrStr.typ"
+    LogicalPath="Libraries.AsBrStr.AsBrStr.typ"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\AsBrStr\AsBrStr.var"
+    LogicalPath="Libraries.AsBrStr.AsBrStr.var"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\AsHW\Binary.lby"
+    LogicalPath="Libraries.AsHW"
+    Type="Library"
+    LastWriteTime="134259830680000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\AsHW\AsHW.fun"
+    LogicalPath="Libraries.AsHW.AsHW.fun"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\AsHW\AsHW.typ"
+    LogicalPath="Libraries.AsHW.AsHW.typ"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\AsHW\AsHW.var"
+    LogicalPath="Libraries.AsHW.AsHW.var"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\ArEventLog\Binary.lby"
+    LogicalPath="Libraries.ArEventLog"
+    Type="Library"
+    LastWriteTime="134259830680000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\ArEventLog\ArEventLog.fun"
+    LogicalPath="Libraries.ArEventLog.ArEventLog.fun"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\ArEventLog\ArEventLog.typ"
+    LogicalPath="Libraries.ArEventLog.ArEventLog.typ"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\ArEventLog\ArEventLog.var"
+    LogicalPath="Libraries.ArEventLog.ArEventLog.var"
+    Type="File"
+    LastWriteTime="134259830680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\IEC103Ut\IEC.lby"
+    LogicalPath="Libraries.IEC103Ut"
+    Type="Library"
+    LastWriteTime="133338006104098357" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\IEC103Ut\IEC103Ut.typ"
+    LogicalPath="Libraries.IEC103Ut.IEC103Ut.typ"
+    Type="File"
+    LastWriteTime="131939330100000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\IEC103Ut\IEC103Ut.var"
+    LogicalPath="Libraries.IEC103Ut.IEC103Ut.var"
+    Type="File"
+    LastWriteTime="131940459300000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\IEC103Ut\IEC103Ut.fun"
+    LogicalPath="Libraries.IEC103Ut.IEC103Ut.fun"
+    Type="File"
+    LastWriteTime="131940466760000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\IEC103Ut\IEC103Ut_WrCmd.st"
+    LogicalPath="Libraries.IEC103Ut.IEC103Ut_WrCmd.st"
+    Type="File"
+    LastWriteTime="131940467780000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\IEC103Ut\IEC103Ut_WrSimplePV.st"
+    LogicalPath="Libraries.IEC103Ut.IEC103Ut_WrSimplePV.st"
+    Type="File"
+    LastWriteTime="131940378020000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\IEC103Ut\IEC103Ut_RdSimplePV.st"
+    LogicalPath="Libraries.IEC103Ut.IEC103Ut_RdSimplePV.st"
+    Type="File"
+    LastWriteTime="131940377740000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\AsIecCon\binary.lby"
+    LogicalPath="Libraries.AsIecCon"
+    Type="Library"
+    LastWriteTime="134281593256336610" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\AsIecCon\AsIecCon.fun"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.fun"
+    Type="File"
+    LastWriteTime="134281593256188087"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\AsIecCon\AsIecCon.typ"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.typ"
+    Type="File"
+    LastWriteTime="134281593256208097"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Libraries\AsIecCon\AsIecCon.var"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.var"
+    Type="File"
+    LastWriteTime="134281593256231305"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\Package.pkg"
+    LogicalPath="GlobalIncludes"
+    Type="Package"
+    LastWriteTime="130742699040000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\bksys.h"
+    LogicalPath="GlobalIncludes.bksys.h"
+    Type="File"
+    LastWriteTime="131896198820000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\bktcp.h"
+    LogicalPath="GlobalIncludes.bktcp.h"
+    Type="File"
+    LastWriteTime="130194009220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\brtcp.h"
+    LogicalPath="GlobalIncludes.brtcp.h"
+    Type="File"
+    LastWriteTime="130194009220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\bsrun.h"
+    LogicalPath="GlobalIncludes.bsrun.h"
+    Type="File"
+    LastWriteTime="130194009220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\dbserv.h"
+    LogicalPath="GlobalIncludes.dbserv.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\dbvist.h"
+    LogicalPath="GlobalIncludes.dbvist.h"
+    Type="File"
+    LastWriteTime="130194009300000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\dbv_parse.h"
+    LogicalPath="GlobalIncludes.dbv_parse.h"
+    Type="File"
+    LastWriteTime="130194009300000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\eventaprol.h"
+    LogicalPath="GlobalIncludes.eventaprol.h"
+    Type="File"
+    LastWriteTime="130194009200000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\parser.h"
+    LogicalPath="GlobalIncludes.parser.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\platform.h"
+    LogicalPath="GlobalIncludes.platform.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\dbsfunc.c"
+    LogicalPath="GlobalIncludes.dbsfunc.c"
+    Type="File"
+    LastWriteTime="130207826120000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\bksysall.c"
+    LogicalPath="GlobalIncludes.bksysall.c"
+    Type="File"
+    LastWriteTime="130207825800000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\parser.c"
+    LogicalPath="GlobalIncludes.parser.c"
+    Type="File"
+    LastWriteTime="130207767260000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\Package.pkg"
+    LogicalPath="DbServ-Basis"
+    Type="Package"
+    LastWriteTime="130742642960000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbserv\ANSIC.prg"
+    LogicalPath="DbServ-Basis.dbserv"
+    Type="Program"
+    LastWriteTime="133338005698947332" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\platform.h"
+    LogicalPath="DbServ-Basis.dbserv.platform.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\bksys.h"
+    LogicalPath="DbServ-Basis.dbserv.bksys.h"
+    Type="File"
+    LastWriteTime="131896198820000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\parser.h"
+    LogicalPath="DbServ-Basis.dbserv.parser.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\dbserv.h"
+    LogicalPath="DbServ-Basis.dbserv.dbserv.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbserv\parser.c"
+    LogicalPath="DbServ-Basis.dbserv.parser.c"
+    Type="File"
+    LastWriteTime="130194914880000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbserv\bksysall.c"
+    LogicalPath="DbServ-Basis.dbserv.bksysall.c"
+    Type="File"
+    LastWriteTime="130202945780000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbserv\bksysgetinfo.c"
+    LogicalPath="DbServ-Basis.dbserv.bksysgetinfo.c"
+    Type="File"
+    LastWriteTime="130194914880000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbserv\dbsfunc.c"
+    LogicalPath="DbServ-Basis.dbserv.dbsfunc.c"
+    Type="File"
+    LastWriteTime="132808613536792776"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbserv\dbserv.c"
+    LogicalPath="DbServ-Basis.dbserv.dbserv.c"
+    Type="File"
+    LastWriteTime="134281613641499696"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbsmon\ANSIC.prg"
+    LogicalPath="DbServ-Basis.dbsmon"
+    Type="Program"
+    LastWriteTime="133338005773295249" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\dbserv.h"
+    LogicalPath="DbServ-Basis.dbsmon.dbserv.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbsmon\dbsfunc.c"
+    LogicalPath="DbServ-Basis.dbsmon.dbsfunc.c"
+    Type="File"
+    LastWriteTime="130194914920000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbsmon\dbsmon.c"
+    LogicalPath="DbServ-Basis.dbsmon.dbsmon.c"
+    Type="File"
+    LastWriteTime="131896181820000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbstest\ANSIC.prg"
+    LogicalPath="DbServ-Basis.dbstest"
+    Type="Program"
+    LastWriteTime="133338005837304111" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\dbserv.h"
+    LogicalPath="DbServ-Basis.dbstest.dbserv.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbstest\dbsfunc.c"
+    LogicalPath="DbServ-Basis.dbstest.dbsfunc.c"
+    Type="File"
+    LastWriteTime="130194914960000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbstest\dbstest.c"
+    LogicalPath="DbServ-Basis.dbstest.dbstest.c"
+    Type="File"
+    LastWriteTime="131896181820000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbsevent\ANSIC.prg"
+    LogicalPath="DbServ-Basis.dbsevent"
+    Type="Program"
+    LastWriteTime="133338005899715682" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\dbserv.h"
+    LogicalPath="DbServ-Basis.dbsevent.dbserv.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbsevent\dbsfunc.c"
+    LogicalPath="DbServ-Basis.dbsevent.dbsfunc.c"
+    Type="File"
+    LastWriteTime="131206571320000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\eventaprol.h"
+    LogicalPath="DbServ-Basis.dbsevent.eventaprol.h"
+    Type="File"
+    LastWriteTime="130194009200000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbsevent\eventaprol.c"
+    LogicalPath="DbServ-Basis.dbsevent.eventaprol.c"
+    Type="File"
+    LastWriteTime="131896150700000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbslib\ANSIC.lby"
+    LogicalPath="DbServ-Basis.dbslib"
+    Type="Library"
+    LastWriteTime="133338005969709012" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbslib\dbslib.typ"
+    LogicalPath="DbServ-Basis.dbslib.dbslib.typ"
+    Type="File"
+    LastWriteTime="130207750760000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbslib\bksysall.c"
+    LogicalPath="DbServ-Basis.dbslib.bksysall.c"
+    Type="File"
+    LastWriteTime="130207750760000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbslib\dbsfunc.c"
+    LogicalPath="DbServ-Basis.dbslib.dbsfunc.c"
+    Type="File"
+    LastWriteTime="130207750760000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbslib\dbslib.c"
+    LogicalPath="DbServ-Basis.dbslib.dbslib.c"
+    Type="File"
+    LastWriteTime="130207751860000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbslib\dbslib.fun"
+    LogicalPath="DbServ-Basis.dbslib.dbslib.fun"
+    Type="File"
+    LastWriteTime="130207750760000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbstcp\ANSIC.prg"
+    LogicalPath="DbServ-Basis.dbstcp"
+    Type="Program"
+    LastWriteTime="133338006043470715" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\bsrun.h"
+    LogicalPath="DbServ-Basis.dbstcp.bsrun.h"
+    Type="File"
+    LastWriteTime="130194009220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\bktcp.h"
+    LogicalPath="DbServ-Basis.dbstcp.bktcp.h"
+    Type="File"
+    LastWriteTime="130194009220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\platform.h"
+    LogicalPath="DbServ-Basis.dbstcp.platform.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\brtcp.h"
+    LogicalPath="DbServ-Basis.dbstcp.brtcp.h"
+    Type="File"
+    LastWriteTime="130194009220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\bksys.h"
+    LogicalPath="DbServ-Basis.dbstcp.bksys.h"
+    Type="File"
+    LastWriteTime="131896198820000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbstcp\brtcp.c"
+    LogicalPath="DbServ-Basis.dbstcp.brtcp.c"
+    Type="File"
+    LastWriteTime="134281593382851657"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbstcp\dbsfunc.c"
+    LogicalPath="DbServ-Basis.dbstcp.dbsfunc.c"
+    Type="File"
+    LastWriteTime="130742642860000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbstcp\clientdiag.c"
+    LogicalPath="DbServ-Basis.dbstcp.clientdiag.c"
+    Type="File"
+    LastWriteTime="130742699040000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbstcp\bksysbrtcp.c"
+    LogicalPath="DbServ-Basis.dbstcp.bksysbrtcp.c"
+    Type="File"
+    LastWriteTime="130742701720000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbstcp\bksysgetpipe.c"
+    LogicalPath="DbServ-Basis.dbstcp.bksysgetpipe.c"
+    Type="File"
+    LastWriteTime="130742703720000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\DbServ-Basis\dbstcp\bksysall.c"
+    LogicalPath="DbServ-Basis.dbstcp.bksysall.c"
+    Type="File"
+    LastWriteTime="130742699040000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\Package.pkg"
+    LogicalPath="IEC103-Treiber"
+    Type="Package"
+    LastWriteTime="131940507680000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103\ANSIC.prg"
+    LogicalPath="IEC103-Treiber.iec103"
+    Type="Program"
+    LastWriteTime="133338006258297517" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103\iec60870_5_103.c"
+    LogicalPath="IEC103-Treiber.iec103.iec60870_5_103.c"
+    Type="File"
+    LastWriteTime="131940839060000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103\iec60870_5_103.h"
+    LogicalPath="IEC103-Treiber.iec103.iec60870_5_103.h"
+    Type="File"
+    LastWriteTime="131971055760000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103\iec__103_sub.c"
+    LogicalPath="IEC103-Treiber.iec103.iec__103_sub.c"
+    Type="File"
+    LastWriteTime="131940841300000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103\iec__103_serv.c"
+    LogicalPath="IEC103-Treiber.iec103.iec__103_serv.c"
+    Type="File"
+    LastWriteTime="131206566220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103\iec__103_disturbance.c"
+    LogicalPath="IEC103-Treiber.iec103.iec__103_disturbance.c"
+    Type="File"
+    LastWriteTime="131206566220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103\iec__103_command.c"
+    LogicalPath="IEC103-Treiber.iec103.iec__103_command.c"
+    Type="File"
+    LastWriteTime="131933282200000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103\iec__103_debug.c"
+    LogicalPath="IEC103-Treiber.iec103.iec__103_debug.c"
+    Type="File"
+    LastWriteTime="131206566220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103\iec__103_date.c"
+    LogicalPath="IEC103-Treiber.iec103.iec__103_date.c"
+    Type="File"
+    LastWriteTime="131206566220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103\iec__103_debug.h"
+    LogicalPath="IEC103-Treiber.iec103.iec__103_debug.h"
+    Type="File"
+    LastWriteTime="131206566220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103\iec__103_date.h"
+    LogicalPath="IEC103-Treiber.iec103.iec__103_date.h"
+    Type="File"
+    LastWriteTime="131206566220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103\iec__103_parse.h"
+    LogicalPath="IEC103-Treiber.iec103.iec__103_parse.h"
+    Type="File"
+    LastWriteTime="131896147860000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103\iec__103_parse.c"
+    LogicalPath="IEC103-Treiber.iec103.iec__103_parse.c"
+    Type="File"
+    LastWriteTime="134281613002653401"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\bksys.h"
+    LogicalPath="IEC103-Treiber.iec103.bksys.h"
+    Type="File"
+    LastWriteTime="131896198820000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\platform.h"
+    LogicalPath="IEC103-Treiber.iec103.platform.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\parser.h"
+    LogicalPath="IEC103-Treiber.iec103.parser.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\parser.c"
+    LogicalPath="IEC103-Treiber.iec103.parser.c"
+    Type="File"
+    LastWriteTime="130207767260000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\bksysall.c"
+    LogicalPath="IEC103-Treiber.iec103.bksysall.c"
+    Type="File"
+    LastWriteTime="130207825800000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\dbsfunc.c"
+    LogicalPath="IEC103-Treiber.iec103.dbsfunc.c"
+    Type="File"
+    LastWriteTime="130207826120000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103Cmd\IEC.prg"
+    LogicalPath="IEC103-Treiber.iec103Cmd"
+    Type="Program"
+    LastWriteTime="133338006343709409" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103Cmd\Main.st"
+    LogicalPath="IEC103-Treiber.iec103Cmd.Main.st"
+    Type="File"
+    LastWriteTime="131940481660000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103Cmd\Types.typ"
+    LogicalPath="IEC103-Treiber.iec103Cmd.Types.typ"
+    Type="File"
+    LastWriteTime="131940095860000000"
+    Private="true" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103Cmd\Variables.var"
+    LogicalPath="IEC103-Treiber.iec103Cmd.Variables.var"
+    Type="File"
+    LastWriteTime="131940459440000000"
+    Private="true" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\IEC103Ut.docx"
+    LogicalPath="IEC103-Treiber.IEC103Ut.docx"
+    Type="File"
+    LastWriteTime="131940507140000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\IEC103Ut.pdf"
+    LogicalPath="IEC103-Treiber.IEC103Ut.pdf"
+    Type="File"
+    LastWriteTime="131940507680000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IO-Treiber\Package.pkg"
+    LogicalPath="IO-Treiber"
+    Type="Package"
+    LastWriteTime="130194919660000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IO-Treiber\iodrv\ANSIC.prg"
+    LogicalPath="IO-Treiber.iodrv"
+    Type="Program"
+    LastWriteTime="133338006480533750" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IO-Treiber\iodrv\iodrv.c"
+    LogicalPath="IO-Treiber.iodrv.iodrv.c"
+    Type="File"
+    LastWriteTime="131896149200000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IO-Treiber\iodrv\iodrv_parse.c"
+    LogicalPath="IO-Treiber.iodrv.iodrv_parse.c"
+    Type="File"
+    LastWriteTime="134281612660143514"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IO-Treiber\iodrv\iodrv_sub.c"
+    LogicalPath="IO-Treiber.iodrv.iodrv_sub.c"
+    Type="File"
+    LastWriteTime="130207828280000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IO-Treiber\iodrv\iodrv.h"
+    LogicalPath="IO-Treiber.iodrv.iodrv.h"
+    Type="File"
+    LastWriteTime="131896149200000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IO-Treiber\iodrv\iodrv_parse.h"
+    LogicalPath="IO-Treiber.iodrv.iodrv_parse.h"
+    Type="File"
+    LastWriteTime="131896149200000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\dbserv.h"
+    LogicalPath="IO-Treiber.iodrv.dbserv.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\parser.h"
+    LogicalPath="IO-Treiber.iodrv.parser.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\bksys.h"
+    LogicalPath="IO-Treiber.iodrv.bksys.h"
+    Type="File"
+    LastWriteTime="131896198820000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\platform.h"
+    LogicalPath="IO-Treiber.iodrv.platform.h"
+    Type="File"
+    LastWriteTime="130194009180000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\parser.c"
+    LogicalPath="IO-Treiber.iodrv.parser.c"
+    Type="File"
+    LastWriteTime="130207767260000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\dbsfunc.c"
+    LogicalPath="IO-Treiber.iodrv.dbsfunc.c"
+    Type="File"
+    LastWriteTime="130207826120000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\GlobalIncludes\bksysall.c"
+    LogicalPath="IO-Treiber.iodrv.bksysall.c"
+    Type="File"
+    LastWriteTime="130207825800000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IO-Treiber\io\ANSIC.prg"
+    LogicalPath="IO-Treiber.io"
+    Type="Program"
+    LastWriteTime="133338006565462322" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IO-Treiber\io\io.c"
+    LogicalPath="IO-Treiber.io.io.c"
+    Type="File"
+    LastWriteTime="130207847160000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\Package.pkg"
+    LogicalPath="Anwendung"
+    Type="Package"
+    LastWriteTime="130742701660000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\kupplung\IEC.prg"
+    LogicalPath="Anwendung.kupplung"
+    Type="Program"
+    LastWriteTime="130194919420000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\kupplung\kupplungCyclic.ld"
+    LogicalPath="Anwendung.kupplung.kupplungCyclic.ld"
+    Type="File"
+    LastWriteTime="134281470271711521"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\kupplung\kupplungInit.ld"
+    LogicalPath="Anwendung.kupplung.kupplungInit.ld"
+    Type="File"
+    LastWriteTime="134281470271801615"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\kupplung\kupplung.var"
+    LogicalPath="Anwendung.kupplung.kupplung.var"
+    Type="File"
+    LastWriteTime="130207725060000000"
+    Private="true" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\dplist\Simple.dob"
+    LogicalPath="Anwendung.dplist"
+    Type="DataObject"
+    LastWriteTime="130194920040000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\dplist\dplist.dat"
+    LogicalPath="Anwendung.dplist.dplist.dat"
+    Type="File"
+    LastWriteTime="132199431220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\typlist\Simple.dob"
+    LogicalPath="Anwendung.typlist"
+    Type="DataObject"
+    LastWriteTime="130194920080000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\typlist\typlist.dat"
+    LogicalPath="Anwendung.typlist.typlist.dat"
+    Type="File"
+    LastWriteTime="131939304200000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\anlage\IEC.prg"
+    LogicalPath="Anwendung.anlage"
+    Type="Program"
+    LastWriteTime="130207859220000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\anlage\anlageCyclic.ld"
+    LogicalPath="Anwendung.anlage.anlageCyclic.ld"
+    Type="File"
+    LastWriteTime="134281470271887595"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\anlage\anlageInit.ld"
+    LogicalPath="Anwendung.anlage.anlageInit.ld"
+    Type="File"
+    LastWriteTime="134281470271987814"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\anlage\anlage.typ"
+    LogicalPath="Anwendung.anlage.anlage.typ"
+    Type="File"
+    LastWriteTime="130207858940000000"
+    Private="true" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\anlage\anlage.var"
+    LogicalPath="Anwendung.anlage.anlage.var"
+    Type="File"
+    LastWriteTime="130207858940000000"
+    Private="true" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\JAN0926.gsd"
+    LogicalPath="Anwendung.JAN0926.gsd"
+    Type="File"
+    LastWriteTime="130207885380000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\dpm_099.br"
+    LogicalPath="Anwendung.dpm_099.br"
+    Type="File"
+    LastWriteTime="130207885060000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Global.var"
+    LogicalPath="Global.var"
+    Type="File"
+    LastWriteTime="130746819920000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\zaehler\IEC.prg"
+    LogicalPath="zaehler"
+    Type="Program"
+    LastWriteTime="130746819740000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\zaehler\zaehler.st"
+    LogicalPath="zaehler.zaehler.st"
+    Type="File"
+    LastWriteTime="130746819740000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\zaehler\calcMP.st"
+    LogicalPath="zaehler.calcMP.st"
+    Type="File"
+    LastWriteTime="130746819740000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\zaehler\zaehler.fun"
+    LogicalPath="zaehler.zaehler.fun"
+    Type="File"
+    LastWriteTime="130746819740000000"
+    Private="true" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Lebensbit\IEC.prg"
+    LogicalPath="Lebensbit"
+    Type="Program"
+    LastWriteTime="130746819740000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Lebensbit\Lebensbit.st"
+    LogicalPath="Lebensbit.Lebensbit.st"
+    Type="File"
+    LastWriteTime="130746819740000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\ident\IEC.prg"
+    LogicalPath="ident"
+    Type="Program"
+    LastWriteTime="130746819740000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\ident\ident.ab"
+    LogicalPath="ident.ident.ab"
+    Type="File"
+    LastWriteTime="130746819740000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\def\IEC.prg"
+    LogicalPath="def"
+    Type="Program"
+    LastWriteTime="130746819740000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\def\def.st"
+    LogicalPath="def.def.st"
+    Type="File"
+    LastWriteTime="130746819740000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Physical\CP3586\Config.pkg"
+    LogicalPath="CP3586"
+    Type="Configuration.ParentUnknown"
+    LastWriteTime="130828003400000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Physical\CP3586\Hardware.hw"
+    LogicalPath="CP3586.Hardware.hw"
+    Type="File"
+    LastWriteTime="134281470573912588"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Physical\CP3586\Hardware.hwl"
+    LogicalPath="CP3586.Hardware.hwl"
+    Type="File"
+    LastWriteTime="134281467475571494"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Physical\CP3586\Hardware.jpg"
+    LogicalPath="CP3586.Hardware.jpg"
+    Type="File"
+    LastWriteTime="134281467475659237"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Physical\CP3586\PLC1\Cpu.pkg"
+    LogicalPath="CP3586.PLC1"
+    Type="Cpu"
+    LastWriteTime="134281472368090985" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Physical\CP3586\PLC1\Cpu.sw"
+    LogicalPath="CP3586.PLC1.Cpu.sw"
+    Type="File"
+    LastWriteTime="134281614265459232"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Physical\CP3586\PLC1\Cpu.per"
+    LogicalPath="CP3586.PLC1.Cpu.per"
+    Type="File"
+    LastWriteTime="130194009140000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Physical\CP3586\PLC1\IoMap.iom"
+    LogicalPath="CP3586.PLC1.IoMap.iom"
+    Type="File"
+    LastWriteTime="130194009220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Physical\CP3586\PLC1\PvMap.vvm"
+    LogicalPath="CP3586.PLC1.PvMap.vvm"
+    Type="File"
+    LastWriteTime="130194009220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Physical\CP3586\PLC1\States\Package.pkg"
+    LogicalPath="CP3586.PLC1.States"
+    Type="Package"
+    LastWriteTime="130194009220000000" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Physical\CP3586\PLC1\States\ACTIVE_GDM.osl"
+    LogicalPath="CP3586.PLC1.States.ACTIVE_GDM.osl"
+    Type="File"
+    LastWriteTime="130194009220000000"
+    Private="false" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Physical\CP3586\PLC1\Connectivity\Package.pkg"
+    LogicalPath="CP3586.PLC1.Connectivity"
+    Type="Package"
+    LastWriteTime="134281470269800891" />
+  <Object
+    Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Physical\CP3586\PLC1\Connectivity\OpcUaCs\Package.pkg"
+    LogicalPath="CP3586.PLC1.Connectivity.OpcUaCs"
+    Type="Package"
+    LastWriteTime="134281470269933990" />
+</Objects>

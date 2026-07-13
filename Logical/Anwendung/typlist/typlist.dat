@@ -1,0 +1,1091 @@
+
+;***********************************************************************************
+; typlist.dat                                          Erstelldatum:    18.11.2003
+; Bearbeiter: 	L.Waibel	                           Letzte Änderung:
+;				MEGASYSTEMS Automatisierungssysteme GmbH, München
+;***********************************************************************************
+;	Mode bei IEC-Items
+;		0	Einzelmeldung (EM) unverändert 					0>0, 1>1
+;		1	Einzelmeldung (EM) invertiert					0>1, 1>0
+;		2	Einzelmeldung (EM) als Doppelmeldung	 		0>1, 1>2
+;		3	Einzelmeldung (EM) invertiert als Doppelmeldung	0>2, 1>1
+;		10	Doppelmeldung (DM) unverändert					0>0,1>1,2>2,3>3
+;		11	Doppelmeldung (DM) invertiert					0>0,1>2,2>1,3>3
+;		12	Doppelmeldung (DM) als Einzelmeldung			1>0,2>1             (DEFAULT)
+;		13	Doppelmeldung (DM) invertiert als Einzelmeldung	1>1,2>0
+;--------------------------------
+; Definition der Elementartypen
+;--------------------------------
+
+"$BOOL",						;Elementartyp BOOL
+"#ALL Typ.Nr=0"
+"§ITEM"
+"#ALL Typ=_BOOL"
+
+"$BOOL_Ts",						;Elementartyp BOOL mit Zeitstempel
+"#ALL Typ.Nr=1"
+"§ITEM"
+"#ALL Typ=_BOOL Ts=1"
+
+"$USINT",						;Elementartyp USINT
+"#ALL Typ.Nr=2"
+"§ITEM"
+"#ALL Typ=_USINT "
+
+"$USINT_Ts",					;Elementartyp USINT mit Zeitstempel
+"#ALL Typ.Nr=3"
+"§ITEM"
+"#ALL Typ=_USINT Ts=1"
+
+"$UINT",						;Elementartyp UINT
+"#ALL Typ.Nr=6"
+"§ITEM"
+"#ALL Typ=_UINT "
+
+"$INT",							;Elementartyp INT
+"#ALL Typ.Nr=8"
+"§ITEM"
+"#ALL Typ=_INT "
+
+"$INT_Ts",						;Elementartyp INT mit Zeitstempel
+"#ALL Typ.Nr=9"
+"§ITEM"
+"#ALL Typ=_INT Ts=1"
+
+"$UDINT",						;Elementartyp UDINT
+"#ALL Typ.Nr=10"
+"§ITEM"
+"#ALL Typ=_UDINT "
+
+"$DINT",						;Elementartyp DINT
+"#ALL Typ.Nr=12"
+"§ITEM"
+"#ALL Typ=_DINT "
+
+;--------------------------------
+; Definition der Anwendungstypen
+;--------------------------------
+"$QUITT"						;Quittierdatenpunkte
+"#ALL Typ.Nr=19"
+"§ITEM",						;alles quittieren
+"	#ALL Typ=_BOOL Item.Nr=0 Item.Text=_all Item.Name=_all	Ts=1"
+"	#I/O Dir=W"
+"	#VIS Quitt=1 Grp=0"
+"§ITEM",						;Grp1 quittieren
+"	#ALL Typ=_BOOL Item.Nr=1 Item.Text=_1 Item.Name=_1	Ts=1"
+"	#I/O Dir=W"
+"	#VIS Quitt=1 Grp=1"
+
+;--------------------------------
+"$ABB_REF542plus"				;Feldleitgerät
+"#ALL Typ.Nr=50 Buf=1"
+"§ITEM",						;Kopplungsstörung
+"	#ALL Typ=_BOOL Item.Nr=0 Item.Text=_KopplStoer Item.Name=USM35	Ts=1"
+"	#IEC Err.Kopplung=1"
+"	#VIS Dtyp=AL TList=2"
+"§ITEM",						;Q0 Leistungsschalter ein
+"	#ALL Typ=_BOOL Item.Nr=1 Item.Text=_LeisSchaltEIN Item.Name=UBM01 Ts=1"
+"	#IEC Type=240 Info.Nr=160 Mode=12"
+"	#VIS Dtyp=BP TList=1"
+"§ITEM",						;Q0 Leistungsschalter aus
+"	#ALL Typ=_BOOL Item.Nr=2 Item.Text=_LeisSchaltAUS Item.Name=UBM02 Ts=1"
+"	#IEC Type=240 Info.Nr=160 Mode=13"
+"	#VIS Dtyp=BP TList=1"
+"§ITEM",						;Q1 Einschubwagen ein
+"	#ALL Typ=_BOOL Item.Nr=3 Item.Text=_Einschub_EIN Item.Name=UBM03 Ts=1"
+"	#IEC Type=240 Info.Nr=164 Mode=12"
+"	#VIS Dtyp=BP TList=1"
+"§ITEM",						;Q1 Einschubwagen  aus
+"	#ALL Typ=_BOOL Item.Nr=4 Item.Text=_Einschub_AUS Item.Name=UBM04 Ts=1"
+"	#IEC Type=240 Info.Nr=164 Mode=13"
+"	#VIS Dtyp=BP TList=1"
+"§ITEM",						;Q8 Erder ein
+"	#ALL Typ=_BOOL Item.Nr=5 Item.Text=_AbgangserdEIN Item.Name=UBM05 Ts=1"
+"	#IEC Type=240 Info.Nr=165 Mode=12"
+"	#VIS Dtyp=BP TList=1"
+"§ITEM",						;Q8 Erder  aus
+"	#ALL Typ=_BOOL Item.Nr=6 Item.Text=_AbgangserdAUS Item.Name=UBM06 Ts=1"
+"	#IEC Type=240 Info.Nr=165 Mode=13"
+"	#VIS Dtyp=BP TList=1"
+"§ITEM",						;IL1
+"	#ALL Typ=_INT Item.Nr=7 Item.Text=_Strom_L1 Item.Name=MMI01"
+"	#IEC Type=160 Info.Nr=148 Analog.Nr=1"
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;IL2
+"	#ALL Typ=_INT Item.Nr=8 Item.Text=_Strom_L2 Item.Name=MMI02"
+"	#IEC Type=160 Info.Nr=148 Analog.Nr=2"
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;IL3
+"	#ALL Typ=_INT Item.Nr=9 Item.Text=_Strom_L3 Item.Name=MMI03"
+"	#IEC Type=160 Info.Nr=148 Analog.Nr=3"
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;Q1 Einschubwagen ein SS2
+"	#ALL Typ=_BOOL Item.Nr=10 Item.Text=_EinschKuppEIN Item.Name=KBM03 Ts=1"
+"	#IEC Type=240 Info.Nr=166 Mode=12"
+"§ITEM",						;Q1 Einschubwagen  aus SS2
+"	#ALL Typ=_BOOL Item.Nr=11 Item.Text=_EinschKuppAUS Item.Name=KBM04 Ts=1"
+"	#IEC Type=240 Info.Nr=166 Mode=13"
+"§ITEM",						;Q8 Erder ein SS2
+"	#ALL Typ=_BOOL Item.Nr=12 Item.Text=_ErderKuppEIN Item.Name=KBM05 Ts=1"
+"	#IEC Type=240 Info.Nr=167 Mode=12"
+"§ITEM",						;Q8 Erder  aus SS2
+"	#ALL Typ=_BOOL Item.Nr=13 Item.Text=_ErderKuppAUS Item.Name=KBM06 Ts=1"
+"	#IEC Type=240 Info.Nr=167 Mode=13"
+"§ITEM",						;P Wirkleistung
+"	#ALL Typ=_INT Item.Nr=14 Item.Text=_Wirkleistung Item.Name=KMP01"
+"	#IEC Type=160 Info.Nr=148 Analog.Nr=7"
+"	#VIS Dtyp=AP Einh=kW Kpos=0"
+
+"$KUPPLUNG2"						;I/O-Treiberdaten für Kuppelfeld Teil 2 (Umrangierung aus SS1)
+"#ALL Typ.Nr=51 Buf=1"
+"§ITEM","#ALL Typ=_BOOL Item.Nr=0 Item.Text=_Einschubwagen_EIN Item.Name=KBM03 Ts=1","#I/O ","#VIS Dtyp=BP TList=1",	;Q1 Einschubwagen ein SS2
+"§ITEM","#ALL Typ=_BOOL Item.Nr=1 Item.Text=_Einschubwagen_AUS Item.Name=KBM04 Ts=1","#I/O ","#VIS Dtyp=BP TList=1",	;Q1 Einschubwagen aus SS2
+"§ITEM","#ALL Typ=_BOOL Item.Nr=2 Item.Text=_Abgangserder_EIN Item.Name=KBM05 Ts=1","#I/O ","#VIS Dtyp=BP TList=1",	;Q8 Erder ein SS2
+"§ITEM","#ALL Typ=_BOOL Item.Nr=3 Item.Text=_Abgangserder_AUS Item.Name=KBM06 Ts=1","#I/O ","#VIS Dtyp=BP TList=1",	;Q8 Erder aus SS2
+
+
+"$test"						;Janitza Universalmessgerät UMG503
+"#ALL Typ.Nr=29"
+"§ITEM",						;Kopplungsstörung
+"	#ALL Typ=_INT Item.Nr=0 Item.Text=_ap1 Item.Name=AP0",
+"   #I/O ",
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;Strom L1 Mittelwert
+"	#ALL Typ=_UDINT Item.Nr=1 Item.Text=_zl1 Item.Name=ZL0",
+"   #I/O ",
+"	#VIS Dtyp=ZL Einh=A Kpos=1"
+"§ITEM",						;Strom L1 Mittelwert
+"	#ALL Typ=_INT Item.Nr=2 Item.Text=_AP2 Item.Name=AP1",
+"   #I/O ",
+"	#VIS Dtyp=AP Einh=A Kpos=1"
+"§ITEM",						;Alarm
+"	#ALL Typ=_BOOL Item.Nr=3 Item.Text=_AL Item.Name=AL1 Ts=1 Quitt=1",
+"   #I/O ",
+"	#VIS Dtyp=AL TList=2"
+
+;--------------------------------
+"$GSD"						;GSD-Typ
+"#ALL Typ.Nr=32"
+"§ITEM",						;Kopplungsstörung
+"	#ALL Typ=_BOOL Item.Nr=0 Item.Text=_KopplStoer Item.Name=SM35	Ts=1",
+"	#L2DP Err.Kopplung=1",
+"	#VIS Dtyp=AL TList=2"
+"§ITEM",						;UL1N
+"	#ALL Typ=_INT Item.Nr=1 Item.Text=_Spg_L1N Item.Name=MU01",
+"	#L2DP Fakt=1.0 IntvlGrp=1",
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;UL2N
+"	#ALL Typ=_INT Item.Nr=2 Item.Text=_Spg_L2N Item.Name=MU02",
+"	#L2DP Fakt=1.0 IntvlGrp=1",
+"	#VIS Dtyp=AP Einh=V Kpos=1"
+"§ITEM",						;UL3N
+"	#ALL Typ=_INT Item.Nr=3 Item.Text=_Spg_L3N Item.Name=MU03",
+"	#L2DP Fakt=1.0 IntvlGrp=1",
+"	#VIS Dtyp=AP Einh=V Kpos=2"
+"§ITEM",						;IL1N
+"	#ALL Typ=_INT Item.Nr=4 Item.Text=_Strom_L1N Item.Name=MI01",
+"	#L2DP Fakt=1.0 IntvlGrp=1",
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;IL2N
+"	#ALL Typ=_INT Item.Nr=5 Item.Text=_Strom_L1N Item.Name=MI02",
+"	#L2DP Fakt=1.0 IntvlGrp=1",
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;IL3N
+"	#ALL Typ=_INT Item.Nr=6 Item.Text=_Strom_L1N Item.Name=MI03",
+"	#L2DP Fakt=1.0 IntvlGrp=1",
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;Wirkarbeit
+"	#ALL Typ=_DINT Item.Nr=7 Item.Text=_Wirkarbeit Item.Name=MQ01",
+"	#L2DP Fakt=1.0 IntvlGrp=1",
+"	#VIS Dtyp=AP Einh=kWh Kpos=0"
+"§ITEM",						;Wirkleistung
+"	#ALL Typ=_INT Item.Nr=8 Item.Text=_Wirkleist Item.Name=MP01",
+"	#L2DP Fakt=1.0 IntvlGrp=1",
+"	#VIS Dtyp=AP Einh=kW Kpos=0"
+"§ITEM",						;cosPhi
+"	#ALL Typ=_INT Item.Nr=9 Item.Text=_cosPhi Item.Name=MC01",
+"	#L2DP Fakt=100.0 IntvlGrp=1",
+"	#VIS Dtyp=AP Einh=1 Kpos=2"
+"§ITEM",						;Status
+"	#ALL Typ=_INT Item.Nr=10 Item.Text=_Status Item.Name=STAT",
+"	#L2DP Fakt=1.0 IntvlGrp=1",
+"	#VIS Dtyp=AP Einh=1 Kpos=0"
+;--------------------------------
+"$UMG503"						;Janitza Universalmessgerät UMG503
+"#ALL Typ.Nr=98"
+"§ITEM",						;Kopplungsstörung
+"	#ALL Typ=_BOOL Item.Nr=0 Item.Text=_KopplStoer Item.Name=SM35	Ts=1",
+"	#L2DP Err.Kopplung=1",
+"	#VIS Dtyp=AL TList=2"
+"§ITEM",						;Strom L1 Mittelwert
+"	#ALL Typ=_INT Item.Nr=1 Item.Text=_Strom_L1 Item.Name=MI01",
+"	#L2DP ReqAdrs=1003 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2",
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;Strom L2 Mittelwert
+"	#ALL Typ=_INT Item.Nr=2 Item.Text=_Strom_L2 Item.Name=MI02",
+"	#L2DP ReqAdrs=1004 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2",
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;Strom L3 Mittelwert
+"	#ALL Typ=_INT Item.Nr=3 Item.Text=_Strom_L3 Item.Name=MI03",
+"	#L2DP ReqAdrs=1005 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2",
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;Strom Klirrfaktor L1 Mittelwert
+"	#ALL Typ=_INT Item.Nr=4 Item.Text=_StromL1_Klirr Item.Name=MI05",
+"	#L2DP ReqAdrs=1393 ReqTyp=_REAL Fakt=10.0 IntvlGrp=2",
+"	#VIS Dtyp=AP Einh=X Kpos=1"
+"§ITEM",						;Strom Klirrfaktor L2 Mittelwert
+"	#ALL Typ=_INT Item.Nr=5 Item.Text=_StromL2_Klirr Item.Name=MI06",
+"	#L2DP ReqAdrs=1394 ReqTyp=_REAL Fakt=10.0 IntvlGrp=2",
+"	#VIS Dtyp=AP Einh=X Kpos=1"
+"§ITEM",						;Strom Klirrfaktor L3 Mittelwert
+"	#ALL Typ=_INT Item.Nr=6 Item.Text=_StromL3_Klirr Item.Name=MI07",
+"	#L2DP ReqAdrs=1395 ReqTyp=_REAL Fakt=10.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=X Kpos=1"
+"§ITEM",						;Spannung L1-N
+"	#ALL Typ=_INT Item.Nr=7 Item.Text=_Spannung_L1_N Item.Name=MU01"
+"	#L2DP ReqAdrs=1012 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Spannung L2-N
+"	#ALL Typ=_INT Item.Nr=8 Item.Text=_Spannung_L2_N Item.Name=MU02"
+"	#L2DP ReqAdrs=1013 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Spannung L3-N
+"	#ALL Typ=_INT Item.Nr=9 Item.Text=_Spannung_L3_N Item.Name=MU03"
+"	#L2DP ReqAdrs=1014 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Spannung L1-L2
+"	#ALL Typ=_INT Item.Nr=10 Item.Text=_Spannung_L1_2 Item.Name=MU04"
+"	#L2DP ReqAdrs=1024 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Spannung L1-L3
+"	#ALL Typ=_INT Item.Nr=11 Item.Text=_Spannung_L1_3 Item.Name=MU05"
+"	#L2DP ReqAdrs=1026 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Spannung L2-L3
+"	#ALL Typ=_INT Item.Nr=12 Item.Text=_Spannung_L2_3 Item.Name=MU06"
+"	#L2DP ReqAdrs=1025 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Spannung Klirrfaktor L1 Mittelwert
+"	#ALL Typ=_INT Item.Nr=13 Item.Text=_SpgL1_N_Klirr Item.Name=MU07"
+"	#L2DP ReqAdrs=1390 ReqTyp=_REAL Fakt=10.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=X Kpos=1"
+"§ITEM",						;Spannung Klirrfaktor L2 Mittelwert
+"	#ALL Typ=_INT Item.Nr=14 Item.Text=_SpgL2_N_Klirr Item.Name=MU08"
+"	#L2DP ReqAdrs=1391 ReqTyp=_REAL Fakt=10.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=X Kpos=1"
+"§ITEM",						;Spannung Klirrfaktor L3 Mittelwert
+"	#ALL Typ=_INT Item.Nr=15 Item.Text=_SpgL3_N_Klirr Item.Name=MU09"
+"	#L2DP ReqAdrs=1392 ReqTyp=_REAL Fakt=10.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=X Kpos=1"
+"§ITEM",						;Wirkleistung
+"	#ALL Typ=_INT Item.Nr=16 Item.Text=_Wirkleistung Item.Name=MP01 Buf=1"
+"	#L2DP ReqAdrs=1096 ReqTyp=_REAL Fakt=0.001 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=kW Kpos=0"
+"§ITEM",						;Blindleistung
+"	#ALL Typ=_INT Item.Nr=17 Item.Text=_Blindleistung Item.Name=MQ01 Buf=1"
+"	#L2DP ReqAdrs=1104 ReqTyp=_REAL Fakt=0.001 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=kvar Kpos=0"
+"§ITEM",						;Oberschwingungsanteil THD L1
+"	#ALL Typ=_INT Item.Nr=18 Item.Text=_OberschwTHDL1 Item.Name=MU10"
+"	#L2DP ReqAdrs=1112 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=X Kpos=0"
+"§ITEM",						;Oberschwingungsanteil THD L2
+"	#ALL Typ=_INT Item.Nr=19 Item.Text=_OberschwTHDL2 Item.Name=MU11"
+"	#L2DP ReqAdrs=1113 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=X Kpos=0"
+"§ITEM",						;Oberschwingungsanteil THD L3
+"	#ALL Typ=_INT Item.Nr=20 Item.Text=_OberschwTHDL3 Item.Name=MU12"
+"	#L2DP ReqAdrs=1114 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=X Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 1 L1
+"	#ALL Typ=_INT Item.Nr=21 Item.Text=_SpTeilsch1L1 Item.Name=MU31"
+"	#L2DP ReqAdrs=1520 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 2 L1
+"	#ALL Typ=_INT Item.Nr=22 Item.Text=_SpTeilsch2L1 Item.Name=MU32"
+"	#L2DP ReqAdrs=1523 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 3 L1
+"	#ALL Typ=_INT Item.Nr=23 Item.Text=_SpTeilsch3L1 Item.Name=MU33"
+"	#L2DP ReqAdrs=1526 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 4 L1
+"	#ALL Typ=_INT Item.Nr=24 Item.Text=_SpTeilsch4L1 Item.Name=MU34"
+"	#L2DP ReqAdrs=1529 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 5 L1
+"	#ALL Typ=_INT Item.Nr=25 Item.Text=_SpTeilsch5L1 Item.Name=MU35"
+"	#L2DP ReqAdrs=1532 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 6 L1
+"	#ALL Typ=_INT Item.Nr=26 Item.Text=_SpTeilsch6L1 Item.Name=MU36"
+"	#L2DP ReqAdrs=1535 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 7 L1
+"	#ALL Typ=_INT Item.Nr=27 Item.Text=_SpTeilsch7L1 Item.Name=MU37"
+"	#L2DP ReqAdrs=1538 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 8 L1
+"	#ALL Typ=_INT Item.Nr=28 Item.Text=_SpTeilsch8L1 Item.Name=MU38"
+"	#L2DP ReqAdrs=1541 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 9 L1
+"	#ALL Typ=_INT Item.Nr=29 Item.Text=_SpTeilsch9L1 Item.Name=MU39"
+"	#L2DP ReqAdrs=1544 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 10 L1
+"	#ALL Typ=_INT Item.Nr=30 Item.Text=_SpTeilsch10L1 Item.Name=MU40"
+"	#L2DP ReqAdrs=1547 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 11 L1
+"	#ALL Typ=_INT Item.Nr=31 Item.Text=_SpTeilsch11L1 Item.Name=MU41"
+"	#L2DP ReqAdrs=1550 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 12 L1
+"	#ALL Typ=_INT Item.Nr=32 Item.Text=_SpTeilsch12L1 Item.Name=MU42"
+"	#L2DP ReqAdrs=1553 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 13 L1
+"	#ALL Typ=_INT Item.Nr=33 Item.Text=_SpTeilsch13L1 Item.Name=MU43"
+"	#L2DP ReqAdrs=1556 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 14 L1
+"	#ALL Typ=_INT Item.Nr=34 Item.Text=_SpTeilsch14L1 Item.Name=MU44"
+"	#L2DP ReqAdrs=1559 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 15 L1
+"	#ALL Typ=_INT Item.Nr=35 Item.Text=_SpTeilsch15L1 Item.Name=MU45"
+"	#L2DP ReqAdrs=1562 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 16 L1
+"	#ALL Typ=_INT Item.Nr=36 Item.Text=_SpTeilsch16L1 Item.Name=MU46"
+"	#L2DP ReqAdrs=1565 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 17 L1
+"	#ALL Typ=_INT Item.Nr=37 Item.Text=_SpTeilsch17L1 Item.Name=MU47"
+"	#L2DP ReqAdrs=1568 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 18 L1
+"	#ALL Typ=_INT Item.Nr=38 Item.Text=_SpTeilsch18L1 Item.Name=MU48"
+"	#L2DP ReqAdrs=1571 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 19 L1
+"	#ALL Typ=_INT Item.Nr=39 Item.Text=_SpTeilsch19L1 Item.Name=MU49"
+"	#L2DP ReqAdrs=1574 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 20 L1
+"	#ALL Typ=_INT Item.Nr=40 Item.Text=_SpTeilsch20L1 Item.Name=MU50"
+"	#L2DP ReqAdrs=1577 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 1 L2
+"	#ALL Typ=_INT Item.Nr=41 Item.Text=_SpTeilsch1L2 Item.Name=MU51"
+"	#L2DP ReqAdrs=1521 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 2 L2
+"	#ALL Typ=_INT Item.Nr=42 Item.Text=_SpTeilsch2L2 Item.Name=MU52"
+"	#L2DP ReqAdrs=1524 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 3 L2
+"	#ALL Typ=_INT Item.Nr=43 Item.Text=_SpTeilsch3L2 Item.Name=MU53"
+"	#L2DP ReqAdrs=1527 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 4 L2
+"	#ALL Typ=_INT Item.Nr=44 Item.Text=_SpTeilsch4L2 Item.Name=MU54"
+"	#L2DP ReqAdrs=1530 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 5 L2
+"	#ALL Typ=_INT Item.Nr=45 Item.Text=_SpTeilsch5L2 Item.Name=MU55"
+"	#L2DP ReqAdrs=1533 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 6 L2
+"	#ALL Typ=_INT Item.Nr=46 Item.Text=_SpTeilsch6L2 Item.Name=MU56"
+"	#L2DP ReqAdrs=1536 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 7 L2
+"	#ALL Typ=_INT Item.Nr=47 Item.Text=_SpTeilsch7L2 Item.Name=MU57"
+"	#L2DP ReqAdrs=1539 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 8 L2
+"	#ALL Typ=_INT Item.Nr=48 Item.Text=_SpTeilsch8L2 Item.Name=MU58"
+"	#L2DP ReqAdrs=1542 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 9 L2
+"	#ALL Typ=_INT Item.Nr=49 Item.Text=_SpTeilsch9L2 Item.Name=MU59"
+"	#L2DP ReqAdrs=1545 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 10 L2
+"	#ALL Typ=_INT Item.Nr=50 Item.Text=_SpTeilschw10L2 Item.Name=MU60"
+"	#L2DP ReqAdrs=1548 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 11 L2
+"	#ALL Typ=_INT Item.Nr=51 Item.Text=_SpTeilsch11L2 Item.Name=MU61"
+"	#L2DP ReqAdrs=1551 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 12 L2
+"	#ALL Typ=_INT Item.Nr=52 Item.Text=_SpTeilsch12L2 Item.Name=MU62"
+"	#L2DP ReqAdrs=1554 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 13 L2
+"	#ALL Typ=_INT Item.Nr=53 Item.Text=_SpTeilsch13L2 Item.Name=MU63"
+"	#L2DP ReqAdrs=1557 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 14 L2
+"	#ALL Typ=_INT Item.Nr=54 Item.Text=_SpTeilsch14L2 Item.Name=MU64"
+"	#L2DP ReqAdrs=1560 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 15 L2
+"	#ALL Typ=_INT Item.Nr=55 Item.Text=_SpTeilsch15L2 Item.Name=MU65"
+"	#L2DP ReqAdrs=1563 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 16 L2
+"	#ALL Typ=_INT Item.Nr=56 Item.Text=_SpTeilsch16L2 Item.Name=MU66"
+"	#L2DP ReqAdrs=1566 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 17 L2
+"	#ALL Typ=_INT Item.Nr=57 Item.Text=_SpTeilsch17L2 Item.Name=MU67"
+"	#L2DP ReqAdrs=1569 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 18 L2
+"	#ALL Typ=_INT Item.Nr=58 Item.Text=_SpTeilsch18L2 Item.Name=MU68"
+"	#L2DP ReqAdrs=1572 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 19 L2
+"	#ALL Typ=_INT Item.Nr=59 Item.Text=_SpTeilsch19L2 Item.Name=MU69"
+"	#L2DP ReqAdrs=1575 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 20 L2
+"	#ALL Typ=_INT Item.Nr=60 Item.Text=_SpTeilsch20L2 Item.Name=MU70"
+"	#L2DP ReqAdrs=1578 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 1 L3
+"	#ALL Typ=_INT Item.Nr=61 Item.Text=_SpTeilsch1L3 Item.Name=MU71"
+"	#L2DP ReqAdrs=1522 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 2 L3
+"	#ALL Typ=_INT Item.Nr=62 Item.Text=_SpTeilsch2L3 Item.Name=MU72"
+"	#L2DP ReqAdrs=1525 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 3 L3
+"	#ALL Typ=_INT Item.Nr=63 Item.Text=_SpTeilsch3L3 Item.Name=MU73"
+"	#L2DP ReqAdrs=1528 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 4 L3
+"	#ALL Typ=_INT Item.Nr=64 Item.Text=_SpTeilsch4L3 Item.Name=MU74"
+"	#L2DP ReqAdrs=1531 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 5 L3
+"	#ALL Typ=_INT Item.Nr=65 Item.Text=_SpTeilsch5L3 Item.Name=MU75"
+"	#L2DP ReqAdrs=1534 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 6 L3
+"	#ALL Typ=_INT Item.Nr=66 Item.Text=_SpTeilsch6L3 Item.Name=MU76"
+"	#L2DP ReqAdrs=1537 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 7 L3
+"	#ALL Typ=_INT Item.Nr=67 Item.Text=_SpTeilsch7L3 Item.Name=MU77"
+"	#L2DP ReqAdrs=1540 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 8 L3
+"	#ALL Typ=_INT Item.Nr=68 Item.Text=_SpTeilsch8L3 Item.Name=MU78"
+"	#L2DP ReqAdrs=1543 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 9 L3
+"	#ALL Typ=_INT Item.Nr=69 Item.Text=_SpTeilsch9L3 Item.Name=MU79"
+"	#L2DP ReqAdrs=1546 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 10 L3
+"	#ALL Typ=_INT Item.Nr=70 Item.Text=_SpTeilsch10L3 Item.Name=MU80"
+"	#L2DP ReqAdrs=1549 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 11 L3
+"	#ALL Typ=_INT Item.Nr=71 Item.Text=_SpTeilsch11L3 Item.Name=MU81"
+"	#L2DP ReqAdrs=1552 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 12 L3
+"	#ALL Typ=_INT Item.Nr=72 Item.Text=_SpTeilsch12L3 Item.Name=MU82"
+"	#L2DP ReqAdrs=1555 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 13 L3
+"	#ALL Typ=_INT Item.Nr=73 Item.Text=_SpTeilsch13L3 Item.Name=MU83"
+"	#L2DP ReqAdrs=1558 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 14 L3
+"	#ALL Typ=_INT Item.Nr=74 Item.Text=_SpTeilsch14L3 Item.Name=MU84"
+"	#L2DP ReqAdrs=1561 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 15 L3
+"	#ALL Typ=_INT Item.Nr=75 Item.Text=_SpTeilsch15L3 Item.Name=MU85"
+"	#L2DP ReqAdrs=1564 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 16 L3
+"	#ALL Typ=_INT Item.Nr=76 Item.Text=_SpTeilsch16L3 Item.Name=MU86"
+"	#L2DP ReqAdrs=1567 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 17 L3
+"	#ALL Typ=_INT Item.Nr=77 Item.Text=_SpTeilsch17L3 Item.Name=MU87"
+"	#L2DP ReqAdrs=1570 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 18 L3
+"	#ALL Typ=_INT Item.Nr=78 Item.Text=_SpTeilsch18L3 Item.Name=MU88"
+"	#L2DP ReqAdrs=1573 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 19 L3
+"	#ALL Typ=_INT Item.Nr=79 Item.Text=_SpTeilsch19L3 Item.Name=MU89"
+"	#L2DP ReqAdrs=1576 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 20 L3
+"	#ALL Typ=_INT Item.Nr=80 Item.Text=_SpTeilsch20L3 Item.Name=MU90"
+"	#L2DP ReqAdrs=1579 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Wirkarbeit
+"	#ALL Typ=_DINT Item.Nr=81 Item.Text=_Wirkarbeit Item.Name=ZP01 Buf=1"
+"	#L2DP ReqAdrs=2000 ReqTyp=_DOUBLE Fakt=0.001 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=kWh Kpos=0"
+"§ITEM",						;Blindarbeit ind.
+"	#ALL Typ=_DINT Item.Nr=82 Item.Text=_BlindarbInduk Item.Name=ZB01 Buf=1"
+"	#L2DP ReqAdrs=2010 ReqTyp=_DOUBLE Fakt=0.001 IntvlGrp=1"
+"	#VIS Dtyp=ZL Einh=kvarh Kpos=0"
+"§ITEM",						;Blindarbeit kap.
+"	#ALL Typ=_DINT Item.Nr=83 Item.Text=_BlindarbKapaz Item.Name=ZB02 Buf=1"
+"	#L2DP ReqAdrs=2020 ReqTyp=_DOUBLE Fakt=0.001 IntvlGrp=1"
+"	#VIS Dtyp=ZL Einh=kvarh Kpos=0"
+"§ITEM",						;Scheinarbeit	(nicht vorhanden !)
+"	#ALL Typ=_DINT Item.Nr=84 Buf=1"
+"	#L2DP ReqAdrs=2000 ReqTyp=_DOUBLE Fakt=0.001 IntvlGrp=1"
+"§ITEM",						;Scheinleistung
+"	#ALL Typ=_INT Item.Nr=85 Item.Text=_Scheinleist Item.Name=MS01 Buf=1"
+"	#L2DP ReqAdrs=1100 ReqTyp=_REAL Fakt=0.001 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=kVA Kpos=0"
+
+;neufürUSV		(nur UnterschiedzuTyp30:Blindarbeit varh/Fakt=1.0)
+;--------------------------------
+"$UMG503_1"						;Janitza Universalmessgerät UMG503
+"#ALL Typ.Nr=31"
+"§ITEM",						;Kopplungsstörung
+"	#ALL Typ=_BOOL Item.Nr=0 Item.Text=Kopplungsstoerung Item.Name=SM35	Ts=1",
+"	#L2DP Err.Kopplung=1",
+"	#VIS Dtyp=AL TList=2"
+"§ITEM",						;Strom L1 Mittelwert
+"	#ALL Typ=_INT Item.Nr=1 Item.Text=_Strom_L1 Item.Name=MI01",
+"	#L2DP ReqAdrs=1003 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2",
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;Strom L2 Mittelwert
+"	#ALL Typ=_INT Item.Nr=2 Item.Text=_Strom_L2 Item.Name=MI02",
+"	#L2DP ReqAdrs=1004 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2",
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;Strom L3 Mittelwert
+"	#ALL Typ=_INT Item.Nr=3 Item.Text=_Strom_L3 Item.Name=MI03",
+"	#L2DP ReqAdrs=1005 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2",
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;Strom Klirrfaktor L1 Mittelwert
+"	#ALL Typ=_INT Item.Nr=4 Item.Text=_Strom_L1_Klirr Item.Name=MI05",
+"	#L2DP ReqAdrs=1393 ReqTyp=_REAL Fakt=10.0 IntvlGrp=2",
+"	#VIS Dtyp=AP Einh=X Kpos=1"
+"§ITEM",						;Strom Klirrfaktor L2 Mittelwert
+"	#ALL Typ=_INT Item.Nr=5 Item.Text=_Strom_L2_Klirr Item.Name=MI06",
+"	#L2DP ReqAdrs=1394 ReqTyp=_REAL Fakt=10.0 IntvlGrp=2",
+"	#VIS Dtyp=AP Einh=X Kpos=1"
+"§ITEM",						;Strom Klirrfaktor L3 Mittelwert
+"	#ALL Typ=_INT Item.Nr=6 Item.Text=_Strom_L3_Klirr Item.Name=MI07",
+"	#L2DP ReqAdrs=1395 ReqTyp=_REAL Fakt=10.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=X Kpos=1"
+"§ITEM",						;Spannung L1-N
+"	#ALL Typ=_INT Item.Nr=7 Item.Text=_Spannung_L1_N Item.Name=MU01"
+"	#L2DP ReqAdrs=1012 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Spannung L2-N
+"	#ALL Typ=_INT Item.Nr=8 Item.Text=_Spannung_L2_N Item.Name=MU02"
+"	#L2DP ReqAdrs=1013 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Spannung L3-N
+"	#ALL Typ=_INT Item.Nr=9 Item.Text=_Spannung_L3_N Item.Name=MU03"
+"	#L2DP ReqAdrs=1014 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Spannung L1-L2
+"	#ALL Typ=_INT Item.Nr=10 Item.Text=_Spannung_L1_2 Item.Name=MU04"
+"	#L2DP ReqAdrs=1024 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Spannung L1-L3
+"	#ALL Typ=_INT Item.Nr=11 Item.Text=_Spannung_L1_3 Item.Name=MU05"
+"	#L2DP ReqAdrs=1026 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Spannung L2-L3
+"	#ALL Typ=_INT Item.Nr=12 Item.Text=_Spannung_L2_3 Item.Name=MU06"
+"	#L2DP ReqAdrs=1025 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Spannung Klirrfaktor L1 Mittelwert
+"	#ALL Typ=_INT Item.Nr=13 Item.Text=_Spg_L1_N_Klirr Item.Name=MU07"
+"	#L2DP ReqAdrs=1390 ReqTyp=_REAL Fakt=10.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=X Kpos=1"
+"§ITEM",						;Spannung Klirrfaktor L2 Mittelwert
+"	#ALL Typ=_INT Item.Nr=14 Item.Text=_Spg_L2_N_Klirr Item.Name=MU08"
+"	#L2DP ReqAdrs=1391 ReqTyp=_REAL Fakt=10.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=X Kpos=1"
+"§ITEM",						;Spannung Klirrfaktor L3 Mittelwert
+"	#ALL Typ=_INT Item.Nr=15 Item.Text=_Spg_L3_N_Klirr Item.Name=MU09"
+"	#L2DP ReqAdrs=1392 ReqTyp=_REAL Fakt=10.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=X Kpos=1"
+"§ITEM",						;Wirkleistung
+"	#ALL Typ=_INT Item.Nr=16 Item.Text=_Wirkleistung Item.Name=MP01"
+"	#L2DP ReqAdrs=1096 ReqTyp=_REAL Fakt=0.001 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=kW Kpos=0"
+"§ITEM",						;Blindleistung
+"	#ALL Typ=_INT Item.Nr=17 Item.Text=_Blindleistung Item.Name=MQ01"
+"	#L2DP ReqAdrs=1104 ReqTyp=_REAL Fakt=0.001 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=kvar Kpos=0"
+"§ITEM",						;Oberschwingungsanteil THD L1
+"	#ALL Typ=_INT Item.Nr=18 Item.Text=_OberschwTHDL1 Item.Name=MU10"
+"	#L2DP ReqAdrs=1112 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=X Kpos=0"
+"§ITEM",						;Oberschwingungsanteil THD L2
+"	#ALL Typ=_INT Item.Nr=19 Item.Text=_OberschwTHDL2 Item.Name=MU11"
+"	#L2DP ReqAdrs=1113 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=X Kpos=0"
+"§ITEM",						;Oberschwingungsanteil THD L3
+"	#ALL Typ=_INT Item.Nr=20 Item.Text=_OberschwTHDL3 Item.Name=MU12"
+"	#L2DP ReqAdrs=1114 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=X Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 1 L1
+"	#ALL Typ=_INT Item.Nr=21 Item.Text=_SpTeilsch1L1 Item.Name=MU31"
+"	#L2DP ReqAdrs=1520 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 2 L1
+"	#ALL Typ=_INT Item.Nr=22 Item.Text=_SpTeilsch2L1 Item.Name=MU32"
+"	#L2DP ReqAdrs=1523 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 3 L1
+"	#ALL Typ=_INT Item.Nr=23 Item.Text=_SpTeilsch3L1 Item.Name=MU33"
+"	#L2DP ReqAdrs=1526 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 4 L1
+"	#ALL Typ=_INT Item.Nr=24 Item.Text=_SpTeilsch4L1 Item.Name=MU34"
+"	#L2DP ReqAdrs=1529 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 5 L1
+"	#ALL Typ=_INT Item.Nr=25 Item.Text=_SpTeilsch5L1 Item.Name=MU35"
+"	#L2DP ReqAdrs=1532 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 6 L1
+"	#ALL Typ=_INT Item.Nr=26 Item.Text=_SpTeilsch6L1 Item.Name=MU36"
+"	#L2DP ReqAdrs=1535 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 7 L1
+"	#ALL Typ=_INT Item.Nr=27 Item.Text=_SpTeilsch7L1 Item.Name=MU37"
+"	#L2DP ReqAdrs=1538 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 8 L1
+"	#ALL Typ=_INT Item.Nr=28 Item.Text=_SpTeilsch8L1 Item.Name=MU38"
+"	#L2DP ReqAdrs=1541 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 9 L1
+"	#ALL Typ=_INT Item.Nr=29 Item.Text=_SpTeilsch9L1 Item.Name=MU39"
+"	#L2DP ReqAdrs=1544 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 10 L1
+"	#ALL Typ=_INT Item.Nr=30 Item.Text=_SpTeilsch10L1 Item.Name=MU40"
+"	#L2DP ReqAdrs=1547 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 11 L1
+"	#ALL Typ=_INT Item.Nr=31 Item.Text=_SpTeilsch11L1 Item.Name=MU41"
+"	#L2DP ReqAdrs=1550 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 12 L1
+"	#ALL Typ=_INT Item.Nr=32 Item.Text=_SpTeilsch12L1 Item.Name=MU42"
+"	#L2DP ReqAdrs=1553 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 13 L1
+"	#ALL Typ=_INT Item.Nr=33 Item.Text=_SpTeilsch13L1 Item.Name=MU43"
+"	#L2DP ReqAdrs=1556 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 14 L1
+"	#ALL Typ=_INT Item.Nr=34 Item.Text=_SpTeilsch14L1 Item.Name=MU44"
+"	#L2DP ReqAdrs=1559 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 15 L1
+"	#ALL Typ=_INT Item.Nr=35 Item.Text=_SpTeilsch15L1 Item.Name=MU45"
+"	#L2DP ReqAdrs=1562 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 16 L1
+"	#ALL Typ=_INT Item.Nr=36 Item.Text=_SpTeilsch16L1 Item.Name=MU46"
+"	#L2DP ReqAdrs=1565 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 17 L1
+"	#ALL Typ=_INT Item.Nr=37 Item.Text=_SpTeilsch17L1 Item.Name=MU47"
+"	#L2DP ReqAdrs=1568 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 18 L1
+"	#ALL Typ=_INT Item.Nr=38 Item.Text=_SpTeilsch18L1 Item.Name=MU48"
+"	#L2DP ReqAdrs=1571 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 19 L1
+"	#ALL Typ=_INT Item.Nr=39 Item.Text=_SpTeilsch19L1 Item.Name=MU49"
+"	#L2DP ReqAdrs=1574 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 20 L1
+"	#ALL Typ=_INT Item.Nr=40 Item.Text=_SpTeilsch20L1 Item.Name=MU50"
+"	#L2DP ReqAdrs=1577 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 1 L2
+"	#ALL Typ=_INT Item.Nr=41 Item.Text=_SpTeilsch1L2 Item.Name=MU51"
+"	#L2DP ReqAdrs=1521 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 2 L2
+"	#ALL Typ=_INT Item.Nr=42 Item.Text=_SpTeilsch2L2 Item.Name=MU52"
+"	#L2DP ReqAdrs=1524 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 3 L2
+"	#ALL Typ=_INT Item.Nr=43 Item.Text=_SpTeilsch3L2 Item.Name=MU53"
+"	#L2DP ReqAdrs=1527 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 4 L2
+"	#ALL Typ=_INT Item.Nr=44 Item.Text=_SpTeilsch4L2 Item.Name=MU54"
+"	#L2DP ReqAdrs=1530 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 5 L2
+"	#ALL Typ=_INT Item.Nr=45 Item.Text=_SpTeilsch5L2 Item.Name=MU55"
+"	#L2DP ReqAdrs=1533 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 6 L2
+"	#ALL Typ=_INT Item.Nr=46 Item.Text=_SpTeilsch6L2 Item.Name=MU56"
+"	#L2DP ReqAdrs=1536 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 7 L2
+"	#ALL Typ=_INT Item.Nr=47 Item.Text=_SpTeilsch7L2 Item.Name=MU57"
+"	#L2DP ReqAdrs=1539 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 8 L2
+"	#ALL Typ=_INT Item.Nr=48 Item.Text=_SpTeilsch8L2 Item.Name=MU58"
+"	#L2DP ReqAdrs=1542 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 9 L2
+"	#ALL Typ=_INT Item.Nr=49 Item.Text=_SpTeilsch9L2 Item.Name=MU59"
+"	#L2DP ReqAdrs=1545 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 10 L2
+"	#ALL Typ=_INT Item.Nr=50 Item.Text=_SpTeilsch10L2 Item.Name=MU60"
+"	#L2DP ReqAdrs=1548 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 11 L2
+"	#ALL Typ=_INT Item.Nr=51 Item.Text=_SpTeilsch11L2 Item.Name=MU61"
+"	#L2DP ReqAdrs=1551 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 12 L2
+"	#ALL Typ=_INT Item.Nr=52 Item.Text=_SpTeilsch12L2 Item.Name=MU62"
+"	#L2DP ReqAdrs=1554 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 13 L2
+"	#ALL Typ=_INT Item.Nr=53 Item.Text=_SpTeilsch13L2 Item.Name=MU63"
+"	#L2DP ReqAdrs=1557 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 14 L2
+"	#ALL Typ=_INT Item.Nr=54 Item.Text=_SpTeilsch14L2 Item.Name=MU64"
+"	#L2DP ReqAdrs=1560 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 15 L2
+"	#ALL Typ=_INT Item.Nr=55 Item.Text=_SpTeilsch15L2 Item.Name=MU65"
+"	#L2DP ReqAdrs=1563 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 16 L2
+"	#ALL Typ=_INT Item.Nr=56 Item.Text=_SpTeilsch16L2 Item.Name=MU66"
+"	#L2DP ReqAdrs=1566 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 17 L2
+"	#ALL Typ=_INT Item.Nr=57 Item.Text=_SpTeilsch17L2 Item.Name=MU67"
+"	#L2DP ReqAdrs=1569 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 18 L2
+"	#ALL Typ=_INT Item.Nr=58 Item.Text=_SpTeilsch18L2 Item.Name=MU68"
+"	#L2DP ReqAdrs=1572 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 19 L2
+"	#ALL Typ=_INT Item.Nr=59 Item.Text=_SpTeilsch19L2 Item.Name=MU69"
+"	#L2DP ReqAdrs=1575 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 20 L2
+"	#ALL Typ=_INT Item.Nr=60 Item.Text=_SpTeilsch20L2 Item.Name=MU70"
+"	#L2DP ReqAdrs=1578 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 1 L3
+"	#ALL Typ=_INT Item.Nr=61 Item.Text=_SpTeilsch1L3 Item.Name=MU71"
+"	#L2DP ReqAdrs=1522 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 2 L3
+"	#ALL Typ=_INT Item.Nr=62 Item.Text=_SpTeilsch2L3 Item.Name=MU72"
+"	#L2DP ReqAdrs=1525 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 3 L3
+"	#ALL Typ=_INT Item.Nr=63 Item.Text=_SpTeilsch3L3 Item.Name=MU73"
+"	#L2DP ReqAdrs=1528 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 4 L3
+"	#ALL Typ=_INT Item.Nr=64 Item.Text=_SpTeilsch4L3 Item.Name=MU74"
+"	#L2DP ReqAdrs=1531 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 5 L3
+"	#ALL Typ=_INT Item.Nr=65 Item.Text=_SpTeilsch5L3 Item.Name=MU75"
+"	#L2DP ReqAdrs=1534 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 6 L3
+"	#ALL Typ=_INT Item.Nr=66 Item.Text=_SpTeilsch6L3 Item.Name=MU76"
+"	#L2DP ReqAdrs=1537 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 7 L3
+"	#ALL Typ=_INT Item.Nr=67 Item.Text=_SpTeilsch7L3 Item.Name=MU77"
+"	#L2DP ReqAdrs=1540 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 8 L3
+"	#ALL Typ=_INT Item.Nr=68 Item.Text=_SpTeilsch8L3 Item.Name=MU78"
+"	#L2DP ReqAdrs=1543 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 9 L3
+"	#ALL Typ=_INT Item.Nr=69 Item.Text=_SpTeilsch9L3 Item.Name=MU79"
+"	#L2DP ReqAdrs=1546 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 10 L3
+"	#ALL Typ=_INT Item.Nr=70 Item.Text=_SpTeilsch10L3 Item.Name=MU80"
+"	#L2DP ReqAdrs=1549 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 11 L3
+"	#ALL Typ=_INT Item.Nr=71 Item.Text=_SpTeilsch11L3 Item.Name=MU81"
+"	#L2DP ReqAdrs=1552 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 12 L3
+"	#ALL Typ=_INT Item.Nr=72 Item.Text=_SpTeilsch12L3 Item.Name=MU82"
+"	#L2DP ReqAdrs=1555 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 13 L3
+"	#ALL Typ=_INT Item.Nr=73 Item.Text=_SpTeilsch13L3 Item.Name=MU83"
+"	#L2DP ReqAdrs=1558 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 14 L3
+"	#ALL Typ=_INT Item.Nr=74 Item.Text=_SpTeilsch14L3 Item.Name=MU84"
+"	#L2DP ReqAdrs=1561 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 15 L3
+"	#ALL Typ=_INT Item.Nr=75 Item.Text=_SpTeilsch15L3 Item.Name=MU85"
+"	#L2DP ReqAdrs=1564 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 16 L3
+"	#ALL Typ=_INT Item.Nr=76 Item.Text=_SpTeilsch16L3 Item.Name=MU86"
+"	#L2DP ReqAdrs=1567 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 17 L3
+"	#ALL Typ=_INT Item.Nr=77 Item.Text=_SpTeilsch17L3 Item.Name=MU87"
+"	#L2DP ReqAdrs=1570 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 18 L3
+"	#ALL Typ=_INT Item.Nr=78 Item.Text=_SpTeilsch18L3 Item.Name=MU88"
+"	#L2DP ReqAdrs=1573 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 19 L3
+"	#ALL Typ=_INT Item.Nr=79 Item.Text=_SpTeilsch19L3 Item.Name=MU89"
+"	#L2DP ReqAdrs=1576 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Teilschwingungsanteil 20 L3
+"	#ALL Typ=_INT Item.Nr=80 Item.Text=_SpTeilsch20L3 Item.Name=MU90"
+"	#L2DP ReqAdrs=1579 ReqTyp=_REAL Fakt=1.0 IntvlGrp=2"
+"	#VIS Dtyp=AP Einh=V Kpos=0"
+"§ITEM",						;Wirkarbeit
+"	#ALL Typ=_DINT Item.Nr=81 Item.Text=_Wirkarbeit Item.Name=ZP01"
+"	#L2DP ReqAdrs=2000 ReqTyp=_DOUBLE Fakt=0.001 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=kWh Kpos=0"
+"§ITEM",						;Blindarbeit ind.					!UnterschiedzuTyp30:varh/Fakt=1.0
+"	#ALL Typ=_DINT Item.Nr=82 Item.Text=_BlindarbInduk Item.Name=ZB01"
+"	#L2DP ReqAdrs=2010 ReqTyp=_DOUBLE Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=ZL Einh=varh Kpos=0"
+"§ITEM",						;Blindarbeit kap.					!UnterschiedzuTyp30:varh/Fakt=1.0
+"	#ALL Typ=_DINT Item.Nr=83 Item.Text=_BlindarbKapaz Item.Name=ZB02"
+"	#L2DP ReqAdrs=2020 ReqTyp=_DOUBLE Fakt=1.0 IntvlGrp=1"
+"	#VIS Dtyp=ZL Einh=varh Kpos=0"
+"§ITEM",						;Scheinarbeit	(nicht vorhanden !)
+"	#ALL Typ=_DINT Item.Nr=84"
+"	#L2DP ReqAdrs=2000 ReqTyp=_DOUBLE Fakt=0.001 IntvlGrp=1"
+"§ITEM",						;Scheinleistung
+"	#ALL Typ=_INT Item.Nr=85 Item.Text=_Scheinleist Item.Name=MS01"
+"	#L2DP ReqAdrs=1100 ReqTyp=_REAL Fakt=0.001 IntvlGrp=1"
+"	#VIS Dtyp=AP Einh=kVA Kpos=0"
+
+
+
+;--------------------------------
+"$EINSPEISUNG"					;I/O-Treiberdaten für Einspeisung
+"#ALL Typ.Nr=20 Buf=1"
+"§ITEM","#ALL Typ=_BOOL Item.Nr=0 Item.Name=ESM01 Item.Text=_Kabel1_Schalterfall Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=1 Item.Name=ESM03 Item.Text=_Kabel1Automatenfall Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=2 Item.Name=ESM27 Item.Text=_Kabel1Diffschutz Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=3 Item.Name=EBM01 Item.Text=_Leistungsschalter  Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=4 Item.Name=EBM02 Item.Text=_Leistungsschalter  Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=5 Item.Name=EBM03 Item.Text=_Einschubwagen  Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=6 Item.Name=EBM04 Item.Text=_Einschubwagen  Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=7 Item.Name=EBM05 Item.Text=_Abgangserder  Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=8 Item.Name=EBM06 Item.Text=_Abgangserder Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=9 Item.Name=EBM09 Item.Text=_LS_Feder_gespannt Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=10 Item.Name=EBM10 Item.Text=_LS_Feder_entspannt Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+
+
+"$MESSFELD"						;I/O-Treiberdaten für Messfeld
+"#ALL Typ.Nr=21 Buf=1"
+"§ITEM","#ALL Typ=_BOOL Item.Nr=0 Item.Name=MSM03 Item.Text=_Automatenfall Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=1 Item.Name=MBM03 Item.Text=_Einschubwagen Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=2 Item.Name=MBM04 Item.Text=_Einschubwagen Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=3 Item.Name=MBM05 Item.Text=_Sammelschienenerder Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=4 Item.Name=MBM06 Item.Text=_Sammelschienenerder Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=5 Item.Name=MBM21 Item.Text=_FrgSammelschErderSWM Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_UDINT Item.Nr=6 Item.Name=MZP01 Item.Text=_Wirkarb_SWM Ts=1", "#I/O","#VIS Dtyp=ZL Einh=kWh Kpos=0",
+"§ITEM","#ALL Typ=_UDINT Item.Nr=7 Item.Name=MZB01 Item.Text=_Blindarb_SWM Ts=1", "#I/O","#VIS Dtyp=ZL Einh=kvarh Kpos=0",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=8 Item.Name=MBM60 Item.Text=_15min_Impuls Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=9 Item.Name=MBM61 Item.Text=_HAT_NT Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_UDINT Item.Nr=10 Item.Name=MZP11 Item.Text=_Wrkarb15mSWM Ts=1", "#I/O","#VIS Dtyp=ZL Einh=kWh Kpos=0",
+"§ITEM","#ALL Typ=_UDINT Item.Nr=11 Item.Name=MZB11 Item.Text=_Bliarb15mSWM Ts=1", "#I/O","#VIS Dtyp=ZL Einh=kvarh Kpos=0",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=12 Item.Name=MZP22 Item.Text=_Wrkarb15mSWM Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=13 Item.Name=MZB22 Item.Text=_Bliarb15mSWM Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+
+
+"$TRAFOEINSCHUB"				;I/O-Treiberdaten für Trafoeinschub
+"#ALL Typ.Nr=22 Buf=1"
+"§ITEM","#ALL Typ=_BOOL Item.Nr=0 Item.Name=ABM03 Item.Text=_Einschubwagen  Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=1 Item.Name=ABM04 Item.Text=_Einschubwagen Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=2 Item.Name=ABM05 Item.Text=_Abgangserder Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=3 Item.Name=ABM06 Item.Text=_Abgangserder Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=4 Item.Name=ABM07 Item.Text=_Lasttrennschalter Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=5 Item.Name=ABM08 Item.Text=_Lasttrennschalter Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=6 Item.Name=EBM21 Item.Text=_NS_SchaltEinspeisung Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=7 Item.Name=EBM22 Item.Text=_NS_SchaltEinspeisung Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=8 Item.Name=_BM23 Item.Text=_Erdungsschalter Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=9 Item.Name=KBM24 Item.Text=_NS_SchaltKupVermasch Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=10 Item.Name=KBM25 Item.Text=_NS_SchaltKupVermasch Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=11 Item.Name=AGM51 Item.Text=_Trafotemperaturwarn Ts=1", "#I/O Quitt=1 ","#VIS Dtyp=AL TList=2",
+
+
+"$SAMMELSCHIENE"				;I/O-Treiberdaten für Sammelschiene
+"#ALL Typ.Nr=23 Buf=1"
+"§ITEM","#ALL Typ=_BOOL Item.Nr=0 Item.Name=MSM03 Item.Text=_Automatenfall Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=1 Item.Name=MSM24 Item.Text=_Erdschl_SS1vorhanden Ts=1", "#I/O Quitt=1 Inv=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=2 Item.Name=MBM03 Item.Text=_Einschubwagen Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=3 Item.Name=MBM04 Item.Text=_Einschubwagen Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=4 Item.Name=MBM05 Item.Text=_Sammelschienenerder Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=5 Item.Name=MBM06 Item.Text=_Sammelschienenerder Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=6 Item.Name=MBM21 Item.Text=_Frg_SS1_Sammelsch_BMW Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+
+
+"$SCHALTSPIEL"					;I/O-Treiberdaten für Schaltspiel
+"#ALL Typ.Nr=24 Buf=1"
+"§ITEM","#ALL Typ=_UDINT Item.Nr=0 Item.Name=AZA01 Item.Text=_SchaSplLast","#I/O ","#VIS Dtyp=ZL Kpos=0",
+"§ITEM","#ALL Typ=_UDINT Item.Nr=1 Item.Name=KZA02 Item.Text=_SchaSplKupp","#I/O ","#VIS Dtyp=ZL Kpos=0",
+"§ITEM","#ALL Typ=_UDINT Item.Nr=2 Item.Name=EZA03 Item.Text=_SchaSplEinsp","#I/O ","#VIS Dtyp=ZL Kpos=0",
+
+
+"$UEBERGABEFELD"				;I/O-Treiberdaten für Übergabefeld
+"#ALL Typ.Nr=25 Buf=1"
+"§ITEM","#ALL Typ=_BOOL Item.Nr=0 Item.Name=USM01 Item.Text=_Schalterfall Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=1 Item.Name=USM03 Item.Text=_Automatenfall Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=2 Item.Name=USM21 Item.Text=_Ueberstrom_Ausloes Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=3 Item.Name=USM23 Item.Text=_Stoerung_REF542_plus Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=4 Item.Name=USM24 Item.Text=_Erdschluss_vorwaerts Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=5 Item.Name=USM25 Item.Text=_Erdschl_rueckwaerts Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=6 Item.Name=UGM21 Item.Text=_Ueberstrom_Anregung Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_UDINT Item.Nr=7 Item.Name=UZA01 Item.Text=_SchaSplLast ", "#I/O","#VIS Dtyp=ZL",
+
+
+
+"$KUPPELFELD"					;I/O-Treiberdaten für Kuppelfeld
+"#ALL Typ.Nr=26 Buf=1"
+"§ITEM","#ALL Typ=_BOOL Item.Nr=0 Item.Name=KSM01 Item.Text=_Schalterfall Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=1 Item.Name=KSM03 Item.Text=_Automatenfall Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=2 Item.Name=KSM21 Item.Text=_Ueberstromausloesung Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=3 Item.Name=KSM23 Item.Text=_Stoerung_REF542_plus Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=4 Item.Name=KSM38 Item.Text=_Lampenspannung_fehlt Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=5 Item.Name=KSM39 Item.Text=_RingleitStoert220Vdc Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=6 Item.Name=KGM21 Item.Text=_Ueberstrom_Anregung Ts=1", "#I/O Quitt=1","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=7 Item.Name=UBM08 Item.Text=_Sromrichtung Ts=1","#I/O ","#VIS Dtyp=BP TList=1",
+
+
+"$ALLGMEIN"						;I/O-Treiberdaten für Allgemeinfeld
+"#ALL Typ.Nr=40 Buf=1"
+"§ITEM","#ALL Typ=_BOOL Item.Nr=0 Item.Name=ASM03 Item.Text=_DC_Verteil_Automat Ts=1", "#I/O Inv=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=1 Item.Name=ASM05 Item.Text=_DC_Verteil_Untersp Ts=1", "#I/O ","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=2 Item.Name=ASM06 Item.Text=_DC_Verteil_Ausfall Ts=1", "#I/O ","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=3 Item.Name=ASM07 Item.Text=_StoerUST501_Automat Ts=1", "#I/O Inv=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=4 Item.Name=ASM08 Item.Text=_StoerUST501_Netzger1 Ts=1", "#I/O Inv=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=5 Item.Name=ASM09 Item.Text=_StoerUST501_Netzger2 Ts=1", "#I/O Quitt=1 Inv=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=6 Item.Name=ASM31 Item.Text=_Batterie_Unterspanng Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=7 Item.Name=ASM32 Item.Text=_Batterie_Ueberspanng Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=8 Item.Name=ASM33 Item.Text=_Batterie_SammelStoer Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=9 Item.Name=ASM34 Item.Text=_Batterie_Isolation Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=10 Item.Name=ABM01 Item.Text=_DC_Vert_HauptschEin Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=11 Item.Name=ABM07 Item.Text=_DC_Vert_KuppelschEin Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=12 Item.Name=AGM02 Item.Text=_UST501_SPS_Batterie Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=13 Item.Name=AGM03 Item.Text=_UST501_Watchdog Ts=1", "#I/O Quitt=1 ","#VIS Dtyp=AL TList=2",
+
+
+"$USV"							;I/O-Treiberdaten für USV Anlage
+"#ALL Typ.Nr=41 Buf=1"
+"§ITEM","#ALL Typ=_BOOL Item.Nr=0 Item.Name=ASM36 Item.Text=_SammelstoerBatterie Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=1 Item.Name=ASM38 Item.Text=_Batteriestoerung Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=2 Item.Name=ABM37 Item.Text=_Netzbetrieb Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=3 Item.Name=ABM39 Item.Text=_Bypassbetrieb Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=4 Item.Name=AGM01 Item.Text=_Batteriespan_niedrig Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=5 Item.Name=ASM31 Item.Text=_BypassSchalterfallQ1 Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=6 Item.Name=ASM32 Item.Text=_BypassSchalterfallQ2 Ts=1", "#I/O Quitt=1 Inv=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=7 Item.Name=ASM33 Item.Text=_BypassSchalterfallQ3 Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+
+
+"$SI_BELEUCHTUNG"				;I/O-Treiberdaten für Sicherheitsbeleuchtung
+"#ALL Typ.Nr=42 Buf=1"
+"§ITEM","#ALL Typ=_BOOL Item.Nr=0 Item.Name=ASM36 Item.Text=_Sammelstoermeld Ts=1", "#I/O Quitt=1 Inv=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=1 Item.Name=ASM38 Item.Text=_Stoerung_Ladeeinheit Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=2 Item.Name=ABM39 Item.Text=_Anlagebetriebsbereit Ts=1", "#I/O","#VIS Dtyp=BP TList=1",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=3 Item.Name=ASM40 Item.Text=_Stoerung_Netzteil Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=4 Item.Name=ASM42 Item.Text=_DCErdschl_Ueberwach Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+
+
+"$TRAFO"						;I/O-Treiberdaten für Trafo
+"#ALL Typ.Nr=43 Buf=1"
+"§ITEM","#ALL Typ=_BOOL Item.Nr=0 Item.Name=ASM01 Item.Text=_Schalterfall Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=1 Item.Name=ASM02 Item.Text=_HH_Sicherungsfall Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=2 Item.Name=ASM03 Item.Text=_Automatenfall Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=3 Item.Name=KSM29 Item.Text=_NS_SchaltKupVermasch Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=4 Item.Name=ESM40 Item.Text=_NS_SchaltEinspeis Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=5 Item.Name=ESM41 Item.Text=_SteuerspLuefterstoer Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=6 Item.Name=_SM42 Item.Text=_KompensationStoerung Ts=1", "#I/O Quitt=1","#VIS Dtyp=AL TList=2",
+"§ITEM","#ALL Typ=_BOOL Item.Nr=7 Item.Name=ASM51 Item.Text=_Trafotemperaturausl Ts=1", "#I/O","#VIS Dtyp=AL TList=2",
+;-------------------------------------------------------------------------------------------------------------------------
+"$UMG96"						;Janitza Universalmessgerät UMG96S
+"#ALL Typ.Nr=35"
+"§ITEM",						;Kopplungsstörung
+"	#ALL Typ=_BOOL Item.Nr=0 Item.Text=_KopplStoer Item.Name=SM35	Ts=1",
+"	#L2DP Err.Kopplung=1",
+"	#VIS Dtyp=AL TList=2"
+"§ITEM",						;Uln L1
+"	#ALL Typ=_INT Item.Nr=1 Item.Text=_UL1 Item.Name=MU01",
+"	#L2DP ReqProf=161 ReqAdrs=002 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1",
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+"§ITEM",						;Frequenz
+"	#ALL Typ=_INT Item.Nr=2 Item.Text=_Frq Item.Name=MF01",
+"	#L2DP ReqProf=161 ReqAdrs=062 ReqTyp=_REAL Fakt=1.0 IntvlGrp=1",
+"	#VIS Dtyp=AP Einh=A Kpos=0"
+
+
+"$MW"
+"#ALL Typ.Nr=30 Buf=1"
+"§ITEM",
+"	#ALL Typ=_DINT Item.Nr=0 Item.Name=AMP01 Item.Text=Wirkleistung Ts=0 QUITT=0",
+"	#I/O",
+"	#VIS Dtyp=AP",
+"§ITEM",
+"	#ALL Typ=_DINT Item.Nr=1 Item.Name=AZP01 Item.Text=Wirkarbeit Ts=0 QUITT=0",
+"	#I/O",
+"	#VIS Dtyp=AP",
+
+;--------------------------------
+
+"$SPS"
+"#ALL Typ.Nr=99"
+"§ITEM",
+"	#ALL Typ=_BOOL Item.Nr=0 Item.Name=BM99 Item.Text=Lebensbit Ts=0 QUITT=0", 
+"	#I/O DIR=RW",
+"	#VIS Dtyp=BP",
+"§ITEM",
+"	#ALL Typ=_BOOL Item.Nr=1 Item.Name=BM98 Item.Text=Lebensbit_help Ts=0 QUITT=0", 
+"	#I/O",
+"	#VIS Dtyp=BP",

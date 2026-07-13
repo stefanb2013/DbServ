@@ -1,0 +1,9 @@
+VAR RETAIN
+	dbsmon : DBS_MONITOR;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/DbServ-Basis/dbsmon/dbsmon.c" #2"97" #3"33" *)
+	statePV_xgetadr : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/DbServ-Basis/dbsmon/dbsmon.c" #2"47" #3"41" *)
+END_VAR
+VAR CONSTANT
+END_VAR
+VAR
+	myidBrServer : REFERENCE TO ACCESS_SERVER;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/DbServ-Basis/dbsmon/dbsmon.c" #2"46" #3"25" *)
+END_VAR

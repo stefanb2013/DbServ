@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Library Version="6.40.0" SubType="ANSIC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>dbslib.typ</File>
+    <File>bksysall.c</File>
+    <File>dbsfunc.c</File>
+    <File>dbslib.c</File>
+    <File>dbslib.fun</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="FileIO" FromVersion="2.00.3" />
+    <Dependency ObjectName="sys_lib" FromDate="10.12.2007" />
+  </Dependencies>
+</Library>

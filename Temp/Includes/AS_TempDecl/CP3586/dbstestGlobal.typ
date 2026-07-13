@@ -1,0 +1,28 @@
+TYPE
+	DBS_TEST : STRUCT	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/DbServ-Basis/dbstest/dbstest.c" #2"52" #3"16" *)
+		instance : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/DbServ-Basis/dbstest/dbstest.c" #2"53" #3"17" *)
+		unit : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/DbServ-Basis/dbstest/dbstest.c" #2"54" #3"17" *)
+		device : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/DbServ-Basis/dbstest/dbstest.c" #2"55" #3"17" *)
+		type : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/DbServ-Basis/dbstest/dbstest.c" #2"56" #3"17" *)
+		point : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/DbServ-Basis/dbstest/dbstest.c" #2"57" #3"17" *)
+		item : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/DbServ-Basis/dbstest/dbstest.c" #2"58" #3"17" *)
+		infoerror : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/DbServ-Basis/dbstest/dbstest.c" #2"59" #3"17" *)
+	END_STRUCT;
+	ACCESS_SERVER : STRUCT	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"560" #3"16" *)
+		countEventInstance : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"561" #3"33" *)
+		countWriteInstance : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"562" #3"33" *)
+		countType : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"563" #3"33" *)
+		countUnit : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"564" #3"33" *)
+		pAccessUnit : UDINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"565" #3"20" *)
+		pAccessTypeDesc : UDINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"566" #3"18" *)
+		pAccessPointDesc : UDINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"567" #3"19" *)
+		noDevice : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"568" #3"33" *)
+		pUnitEventState : UDINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"569" #3"25" *)
+		pAccessEventPipe : UDINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"570" #3"26" *)
+		pAccessWritePipe : UDINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"571" #3"26" *)
+		PortNumber : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"572" #3"33" *)
+		TimeoutValue : UINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"573" #3"33" *)
+		TimeOutWritePipe : UDINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"574" #3"33" *)
+		TickCount : UDINT;	(* #1"C:/BIE/03_AS_Projekte/DBServ/07.00/dbserv_0700/Logical/GlobalIncludes/dbserv.h" #2"575" #3"33" *)
+	END_STRUCT;
+END_TYPE

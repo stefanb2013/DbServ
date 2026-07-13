@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.23 SP05?>
+<ObjectStates xmlns="http://br-automation.co.at/AS/ObjectStates">
+  <Object Name="io" Memory="UserROM" Enable="true" />
+  <Object Name="zaehler" Memory="UserROM" Enable="false" />
+  <Object Name="kupplung" Memory="UserROM" Enable="true" />
+  <Object Name="iec103" Memory="UserROM" Enable="true" />
+  <Object Name="iodrv" Memory="UserROM" Enable="true" />
+  <Object Name="l2dp" Memory="UserROM" Enable="true" />
+  <Object Name="dbsevent" Memory="UserROM" Enable="false" />
+  <Object Name="battery" Memory="UserROM" Enable="true" />
+  <Object Name="dbserv" Memory="UserROM" Enable="true" />
+  <Object Name="dbsmon" Memory="UserROM" Enable="true" />
+  <Object Name="dbstest" Memory="UserROM" Enable="false" />
+  <Object Name="dbstcp" Memory="UserROM" Enable="true" />
+  <Object Name="dbvist" Memory="UserROM" Enable="true" />
+  <Object Name="dbvisint" Memory="UserROM" Enable="true" />
+  <Object Name="gps" Memory="UserROM" Enable="true" />
+  <Object Name="version" Memory="UserROM" Enable="true" />
+  <Object Name="ydplist" Memory="UserROM" Enable="false" />
+  <Object Name="ytyplist" Memory="UserROM" Enable="false" />
+  <Object Name="dplist1" Memory="UserROM" Enable="false" />
+  <Object Name="typlist1" Memory="UserROM" Enable="false" />
+  <Object Name="dplist" Memory="UserROM" Enable="true" />
+  <Object Name="typlist" Memory="UserROM" Enable="true" />
+  <Object Name="dplisto" Memory="UserROM" Enable="false" />
+  <Object Name="ioimgcfg" Memory="UserROM" Enable="true" />
+  <Object Name="a_rflx_io" Memory="UserROM" Enable="true" />
+  <Object Name="dbv_text" Memory="UserROM" Enable="true" />
+  <Object Name="dbv_par" Memory="UserROM" Enable="true" />
+  <Object Name="dbv_env" Memory="UserROM" Enable="true" />
+  <Object Name="dbv_atoa" Memory="UserROM" Enable="true" />
+  <Object Name="dbv_func" Memory="UserROM" Enable="true" />
+  <Object Name="dbv_code" Memory="UserROM" Enable="true" />
+  <Object Name="dbv_rs" Memory="UserROM" Enable="true" />
+  <Object Name="dbv_vt1" Memory="UserROM" Enable="true" />
+  <Object Name="dpm_099" Memory="UserROM" Enable="true" />
+  <Object Name="sysconf" Memory="SystemROM" Enable="true" />
+  <Object Name="String_x" Memory="UserROM" Enable="true" />
+  <Object Name="megafubs" Memory="UserROM" Enable="true" />
+  <Object Name="dbv_lib" Memory="UserROM" Enable="true" />
+  <Object Name="dbvi_lib" Memory="UserROM" Enable="true" />
+  <Object Name="dbslib" Memory="UserROM" Enable="true" />
+  <Object Name="DA_x" Memory="UserROM" Enable="true" />
+</ObjectStates>

@@ -1,0 +1,11 @@
+void DbsGetBool(void) {};
+void DbsGetInt(void) {};
+void DbsUdint(void) {};
+void DbsDint(void) {};
+void DbsInt(void) {};
+void DbsUint(void) {};
+void DbsUsintTs(void) {};
+void DbsUsint(void) {};
+void DbsBoolTs(void) {};
+void DbsBool(void) {};
+void DbsRtcTime(void) {};

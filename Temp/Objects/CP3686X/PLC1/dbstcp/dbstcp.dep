@@ -1,0 +1,11 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/sys_lib/sys_lib.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/ETHSOCK/EthSock.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/FileIO/FileIO.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/standard/standard.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/AsIecCon/AsIecCon.fun
+$(AS_PROJECT_PATH)/Logical/DbServ-Basis/dbstcp/brtcp.c
+$(AS_PROJECT_PATH)/Logical/GlobalIncludes/brtcp.h
+$(AS_PROJECT_PATH)/Logical/Libraries/sys_lib/sys_lib.typ
+$(AS_PROJECT_PATH)/Logical/GlobalIncludes/dbserv.h
+$(AS_PROJECT_PATH)/Logical/Libraries/ETHSOCK/EthSock.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/FileIO/FileIO.var

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="6.5.3.11"?>
+<ConfigInfo xmlns="http://br-automation.co.at/AS/BuildInfo">
+  <TaskClass
+    Name="Cyclic#1" />
+  <TaskClass
+    Name="Cyclic#2" />
+  <TaskClass
+    Name="Cyclic#3">
+    <Task
+      Name="io"
+      Disable="false"
+      Source="IO-Treiber.io"
+      Language="ANSIC">
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\io\ioLocal.var" />
+    </Task>
+    <Task
+      Name="kupplung"
+      Disable="false"
+      Source="Anwendung.kupplung"
+      Language="IEC">
+      <InternalFile
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\kupplung\kupplungCyclic.ld.var" />
+      <InternalFile
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\kupplung\kupplungInit.ld.var" />
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\kupplung\kupplung.var" />
+    </Task>
+    <Task
+      Name="anlage"
+      Disable="false"
+      Source="Anwendung.anlage"
+      Language="IEC">
+      <InternalFile
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\anlage\anlageCyclic.ld.var" />
+      <InternalFile
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\anlage\anlageInit.ld.var" />
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\anlage\anlage.typ" />
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\Anwendung\anlage\anlage.var" />
+    </Task>
+    <Task
+      Name="iec103"
+      Disable="false"
+      Source="IEC103-Treiber.iec103"
+      Language="ANSIC">
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\iec103\iec103Local.var" />
+    </Task>
+    <Task
+      Name="iodrv"
+      Disable="false"
+      Source="IO-Treiber.iodrv"
+      Language="ANSIC">
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\iodrv\iodrvLocal.var" />
+    </Task>
+    <Task
+      Name="dbsevent"
+      Disable="false"
+      Source="DbServ-Basis.dbsevent"
+      Language="ANSIC">
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\dbsevent\dbseventLocal.var" />
+    </Task>
+    <Task
+      Name="iec103Cmd"
+      Disable="false"
+      Source="IEC103-Treiber.iec103Cmd"
+      Language="IEC">
+      <InternalFile
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\iec103Cmd\Main.st.var" />
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103Cmd\Types.typ" />
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\IEC103-Treiber\iec103Cmd\Variables.var" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#4">
+    <Task
+      Name="def"
+      Disable="false"
+      Source="def"
+      Language="IEC">
+      <InternalFile
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\def\def.st.var" />
+    </Task>
+    <Task
+      Name="Lebensbit"
+      Disable="false"
+      Source="Lebensbit"
+      Language="IEC">
+      <InternalFile
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\Lebensbit\Lebensbit.st.var" />
+    </Task>
+    <Task
+      Name="zaehler"
+      Disable="false"
+      Source="zaehler"
+      Language="IEC">
+      <InternalFile
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\zaehler\zaehler.st.var" />
+      <InternalFile
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\zaehler\calcMP.st.var" />
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\zaehler\zaehler.fun" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#5" />
+  <TaskClass
+    Name="Cyclic#6" />
+  <TaskClass
+    Name="Cyclic#7" />
+  <TaskClass
+    Name="Cyclic#8">
+    <Task
+      Name="dbstcp"
+      Disable="false"
+      Source="DbServ-Basis.dbstcp"
+      Language="ANSIC">
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\dbstcp\dbstcpLocal.var" />
+    </Task>
+    <Task
+      Name="dbserv"
+      Disable="false"
+      Source="DbServ-Basis.dbserv"
+      Language="ANSIC">
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\dbserv\dbservLocal.var" />
+    </Task>
+    <Task
+      Name="dbsmon"
+      Disable="false"
+      Source="DbServ-Basis.dbsmon"
+      Language="ANSIC">
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\dbsmon\dbsmonLocal.var" />
+    </Task>
+    <Task
+      Name="dbstest"
+      Disable="false"
+      Source="DbServ-Basis.dbstest"
+      Language="ANSIC">
+      <File
+        Path="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1\dbstest\dbstestLocal.var" />
+    </Task>
+  </TaskClass>
+</ConfigInfo>

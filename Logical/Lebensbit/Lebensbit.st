@@ -1,0 +1,14 @@
+
+PROGRAM _CYCLIC
+
+	TON_Lebens(IN :=SPS_7xx0480MSAxxxxxABM99 , PT :=t#10s );
+	TimerWert:=TON_Lebens.Q;
+	
+	IF(TimerWert=TRUE)
+		THEN
+			SPS_7xx0480MSAxxxxxABM99:=FALSE;
+	END_IF
+			
+	SPS_7xx0480MSAxxxxxABM98:=SPS_7xx0480MSAxxxxxABM99;
+
+END_PROGRAM

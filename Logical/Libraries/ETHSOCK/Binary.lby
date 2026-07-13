@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.0.0?>
+<Library xmlns="http://br-automation.co.at/AS/Library" Description="The EthSock library provides functions for using sockets. (obsolete)">
+  <Files>
+    <File>EthSock.fun</File>
+    <File>EthSock.typ</File>
+    <File>EthSock.var</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="runtime" />
+  </Dependencies>
+</Library>

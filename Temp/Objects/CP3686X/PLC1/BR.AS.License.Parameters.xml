@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Parameters>
+  <Connection>
+    <DeviceParameters>/IF=tcpip /LOPO=11159 /SA=1</DeviceParameters>
+    <ConnectionParameters>/COMT=2500 /IP=127.0.0.1 /ANSL=1 /AM=* /PT=11169 /UN='Start' /PW='fVlIhCClAuM3vmfAlnFfIfccY2hEkTPgkZYwMIPaPMM='</ConnectionParameters>
+  </Connection>
+  <AsProject>
+    <ApjFullFileName>C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\dbserv_0640.apj</ApjFullFileName>
+    <ProjectName>dbserv_0640</ProjectName>
+    <ActiveConfigurationName>CP3586</ActiveConfigurationName>
+    <LicenseDataFolder>C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\Objects\CP3586\PLC1</LicenseDataFolder>
+  </AsProject>
+  <General>
+    <DeleteParameterFile>false</DeleteParameterFile>
+  </General>
+</Parameters>

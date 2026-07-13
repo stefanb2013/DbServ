@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="6.5.3.11"?>
+<ProjectSettings xmlns="http://br-automation.co.at/AS/ProjectSettings">
+  <ConfigurationManager ActiveConfigurationName="CP3686X" Batch_0="CP3586" />
+  <Deployment Value="ActiveCpu" />
+  <ExportProject ExportFilePath="Y:\Applikation\10_TBB Produkte\DbServ\Intern\Dev\06.40\dbserv_0630.zip" />
+  <Print Footer="%cSeite: %p" Header="%lProjekt: %n%c%x" />
+</ProjectSettings>

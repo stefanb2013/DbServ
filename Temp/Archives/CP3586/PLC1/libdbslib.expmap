@@ -1,0 +1,16 @@
+{
+  global:
+    DbsGetBool;
+    DbsGetInt;
+    DbsUdint;
+    DbsDint;
+    DbsInt;
+    DbsUint;
+    DbsUsintTs;
+    DbsUsint;
+    DbsBoolTs;
+    DbsBool;
+    DbsRtcTime;
+  local:
+    *;
+ };

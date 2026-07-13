@@ -1,0 +1,4 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/IEC103Ut/IEC103Ut.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/IEC103Ut/IEC103Ut.typ
+$(AS_PROJECT_PATH)/Logical/IEC103-Treiber/iec103Cmd/Variables.var
+$(AS_PROJECT_PATH)/Logical/Libraries/IEC103Ut/IEC103Ut.var

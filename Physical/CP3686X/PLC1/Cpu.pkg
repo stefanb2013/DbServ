@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Cpu xmlns="http://br-automation.co.at/AS/Cpu">
+  <Objects>
+    <Object Type="File" Description="Software Konfiguration">Cpu.sw</Object>
+    <Object Type="File" Description="Deklaration von permanenten Variablen">Cpu.per</Object>
+    <Object Type="File" Description="I/O Zuordnungsdatei">IoMap.iom</Object>
+    <Object Type="File" Description="PV Zuordnungsdatei">PvMap.vvm</Object>
+    <Object Type="Package">States</Object>
+    <Object Type="Package">Connectivity</Object>
+  </Objects>
+  <Configuration ClassID="X20CP1585" GeneratePPCode="false" HasNcOperatingSystem="true" LocalVariablesMemory="MemoryPool" ModuleID="CP1585" Target="SG4" ModuleId="X20CP3686X">
+    <AutomationRuntime Version="6.7.6" />
+    <Build AnsicIncludeDirectories="\Logical\GlobalIncludes" GccVersion="11.3.0" />
+    <DefaultTargetMemory DataObjects="UserROM" Libraries="UserROM" Tasks="UserROM" />
+    <Io ArConfigDataModule="false" ArConfigDataModulePath="$(AS_CPU_PATH)\AS\CfgData.br" IoMapDataModule="false" IoMapDataModulePath="$(AS_CPU_PATH)\AS\IomData.br" />
+    <TaskClasses DefaultIoTaskClass="Automatic" DefaultTaskClass="Cyclic4" />
+    <Transfer AllowWarmRestart="true" DownloadMode="Overload" GeneratePviTransferList="true" IgnoreBrDependencies="false" IgnoreTargetOnlyObjects="false" PackedArConfig="false" PackedIoMap="false" PromptBeforeProject="false" PromptBeforeTask="false" TransferOnlyRelevantChanges="false" />
+  </Configuration>
+</Cpu>

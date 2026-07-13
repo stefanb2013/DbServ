@@ -1,0 +1,10 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/DataObj/DataObj.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/FileIO/FileIO.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/sys_lib/sys_lib.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/brsystem/brsystem.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/DataObj/DataObj.var
+$(AS_PROJECT_PATH)/Logical/DbServ-Basis/dbserv/dbserv.c
+$(AS_PROJECT_PATH)/Logical/GlobalIncludes/dbserv.h
+$(AS_PROJECT_PATH)/Logical/Libraries/FileIO/FileIO.var
+$(AS_PROJECT_PATH)/Logical/Libraries/sys_lib/sys_lib.typ
+$(AS_PROJECT_PATH)/Logical/GlobalIncludes/bksys.h

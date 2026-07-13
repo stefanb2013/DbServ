@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="6.5.3.11"?>
+<SymbolsOptions>
+  <Flags>AcceptEmptyFiles, ConstantsAsArrayLength</Flags>
+</SymbolsOptions>

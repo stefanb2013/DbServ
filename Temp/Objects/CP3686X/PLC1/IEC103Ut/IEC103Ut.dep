@@ -1,0 +1,5 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/IEC103Ut/IEC103Ut.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/IEC103Ut/IEC103Ut.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/sys_lib/sys_lib.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/AsBrStr/AsBrStr.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/IEC103Ut/IEC103Ut.var

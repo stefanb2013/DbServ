@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?AutomationStudio FileVersion="4.9"?>
+<BR.AS.HardwareTopology>
+  <TimeStamps>
+    <TimeStamp LogicalPath="CP3586.Hardware.hw" LastWriteTime="07/10/2026 10:44:56" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="PLC1" Type="X20CP3686X" X="85" Y="85" />
+    <Module Name="X20BM11" Type="X20BM11" X="285" Y="85" />
+    <Module Name="X20CS1030" Type="X20CS1030" X="285" Y="85" />
+    <Module Name="X20TB12" Type="X20TB12" X="285" Y="112" />
+  </Modules>
+  <Links />
+  <InfoElements />
+</BR.AS.HardwareTopology>

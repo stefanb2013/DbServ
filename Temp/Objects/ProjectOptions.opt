@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="6.5.3.11"?>
+<ProjectOptions
+  IecNamingConventions="false"
+  IecKeywordsAsStructureMembers="false"
+  IecExtendedConstants="true"
+  LogicalDirectory="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Logical\"
+  TempDirectory="C:\BIE\03_AS_Projekte\DBServ\07.00\dbserv_0700\Temp\"
+  AutomationStudioVersion="6.5.3.11"
+  AutomationStudioEdition="Standard"
+  BuildCrossReference="false"
+  ActiveConfiguration="CP3586"
+  CreateAnsiCDeclarations="true" />

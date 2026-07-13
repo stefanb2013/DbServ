@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.30 SP12?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">bksys.h</Object>
+    <Object Type="File">bktcp.h</Object>
+    <Object Type="File">brtcp.h</Object>
+    <Object Type="File">bsrun.h</Object>
+    <Object Type="File">dbserv.h</Object>
+    <Object Type="File">dbvist.h</Object>
+    <Object Type="File">dbv_parse.h</Object>
+    <Object Type="File">eventaprol.h</Object>
+    <Object Type="File">parser.h</Object>
+    <Object Type="File">platform.h</Object>
+    <Object Type="File">dbsfunc.c</Object>
+    <Object Type="File">bksysall.c</Object>
+    <Object Type="File">parser.c</Object>
+  </Objects>
+</Package>

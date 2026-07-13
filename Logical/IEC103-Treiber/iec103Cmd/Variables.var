@@ -1,0 +1,6 @@
+VAR
+	IEC103Ut_WrCmd_0 : IEC103Ut_WrCmd;
+	Send : BOOL;
+	Ready : BOOL;
+	status : DINT;
+END_VAR

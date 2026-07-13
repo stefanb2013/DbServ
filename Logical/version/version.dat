@@ -1,0 +1,101 @@
+; durchgeführte Software-Änderungen
+
+;	14.07.2023	BIE     Version 6.40.0 		Kompiliert mit AS 4.12.3
+;											für ATOM-CPUs mit AR E4.93
+
+;	08.11.2021	BIE     Version 6.30.0 		Bugfix in Modul dbserv.c
+
+;	15.07.2021	BIE     Version 6.20.0 		Kompiliert mit AS 4.9.3
+;											für ATOM-CPUs mit AR D4.90
+;											CELERON-CPUs werden nicht mehr unterstützt
+
+;	02.03.2020	BIE     Version 6.11.0 		Kompiliert mit AS 4.6.4
+;											für ATOM-CPUs mit AR C4.63
+;											für CELERON-CPUs mit AR H3.10
+
+;	04.12.2019	BIE     Version 6.10.0 		Kompiliert mit AS 4.4.6
+;											für ATOM-CPUs mit AR C4.45
+;											Lib IEC103Ut für IEC-Kommandos wurde hinzugefügt
+;											dbseventtreiber aktualisiert
+;
+;	08.03.2019	BIE     Version 6.00.0 		Kompiliert mit AS 4.4.6
+;											für ATOM-CPUs mit AR G4.34
+;												
+;   12.10.2016	BIE     Version 4.11.0 		Kompiliert mit AS 4.1.11
+;											Der angepasste IEC-Treiber von WAI wurde hinzugefügt und der dbsevent Treiber von KRZ
+;											Ausserdem werden nun zwei Versionen der .br-Module veröffentlicht:
+;											4.11.0 für ATOM-CPUs mit AR E4.10
+;											3.11.0 für ATOM-CPUs mit AR V3.09	
+
+
+;   31.07.15	BIE     Version 4.10.0 		Portierung in AS 4.1.6.81 mit AR E4.10
+;											inkl. Anpassungen für dbtcp für ATOM CPUs mit AR >x4.xx
+;
+;	12.08.13	WAI		Version 3.00.0		diverse Tests, Bereinigung der Sourcecodes
+;
+;	29.07.13	KRZ		Version 3.00.0		Portierung auf AS 3.0.90.23 SP05
+;
+;	30.06.11	RES		Version 2.07.1		Entwicklungsprojekt und Beispielprojekt mit AS2.7 kompiliert
+;											AS V 2.7.0.20 SP13
+;											AR N 2.95
+;											Keine funktionellen Aenderungen
+;
+;	18.01.11	RES		Version 2.07		Erste freigegebene Vollversion für X20 CPUs
+;						dbserv86.pgp		Neues Entwicklungsprojekt mit X20CP3486 erstellt
+;											AS V 2.6.0.7
+;											AR V 2.92
+;						dbsbs486.pgp		Neues Beispielprojekt für X20CP3486 erstellt
+;											AS + AR wie oben
+;											Keine funktionellen Aenderungen
+;
+;	26.11.10	WAI		Version 2.06.4
+;						iec103		IsANumber() geaendert: nun mit Vorzeichen Unterstuetzung
+;						iodrv		Schreibzugriff auf PVs aktiviert
+;
+;	04.11.09	WAI		Version 2.06.3
+;						l2dp		um510.c	verbesserte Reihenfolge beim Polling der Profile wegen Probleme bei langsamen Reaktionszeiten
+;
+;	12.10.09	WAI		Version 2.06.2
+;						l2dp		neues Schlüsselwort Endian (=Big oder =Little) für Byte-Order
+;									Profibus-Diagnose pL2DP_PbDataIn jetzt 244 statt 128 Byte
+;
+;	01.10.09	WAI		Version 2.06.1
+;						l2dp		neues Schlüsselwort Inv (Invers) für BOOL-Variablen
+;
+;	21.08.09	WAI		Version 2.06 alle Module gestempelt
+;						l2dp		neue Device-Variante UMG510
+;									neue Schlüsselworte für GSD-Treiber (Mode, ModePar) wegen SYMAP
+;
+;	21.04.08	WAI		Version 2.05
+;						l2dp		neue Device-Variante SPAZC302 für ABB-Gateways
+;
+;	20.02.08	WAI		Version 2.04
+;						l2dp		neue Device-Variante UMGProfil für UMG96S und UMG507
+;
+;	28.01.08	RES		Version 2.04
+;						dbslib:		Fehlerbehebung durch KUR: Status bei DbsGetBool() und DbsGetInt()
+;						dbvi_lib:	Fehlerbehebung durch KUR: Output-Aktualisierung in letzter Displayzeile
+;
+;	25.06.07	WAI		Version 2.03 für IEC-Treiber (Anpassung Mode 13)
+;
+;	18.05.07	WAI		Version 2.02
+;						dbsmon.c	Anzeige des valid-Status
+;						gsd.c,l2dp.h,l2dp_parse.c,l2dp_parse.h
+;									neuer Profibus-Typ "GSD"
+;									jetzt 4 statt 1 L2DP-Linie möglich, dafür aber max. 64 statt 128 devices per line
+;									(wegen 64kB-Grenze)
+;						dbv_text.dat negative Werte ermöglicht incl. Korrektur bei Nachkommastellen
+;						dbvist.c	Alarmquittierung aktiviert (direktes Schreiben in PAB)
+;						alle anderen Module:	ebenfalls auf V2.02 gestempelt, um Verwirrungen zu vermeiden
+;
+;	09.05.07	WAI		Version 2.01 (Projektabgleich)
+;						l2dp.c		Defaultwert Fakt = 1.0
+;						umg503.c	kein neuer Request bei Kopplungsstörung wegen wiederholten Fehlermeldungen
+;						iodrv.c		Schreibattribut für quittierpflichtige Variablen
+;						dbv_rs.dat	9600Bd wegen Problem mit IF060 und Tableau
+;
+;	08.09.06	WAI		Version 2.00
+;	04.07.06	WAI		Version mit neuem DbVist
+;	22.06.06	WAI		Version mit DbVist
+;	07.04.06	WAI		Erstfassung
+

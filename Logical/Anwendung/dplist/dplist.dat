@@ -1,0 +1,410 @@
+;***********************************************************************************
+; dplist.dat                                           Erstelldatum:    07.04.2006
+; Bearbeiter: 	L.Waibel	                           Letzte Änderung:
+;				MEGASYSTEMS Automatisierungssysteme GmbH, München
+;***********************************************************************************
+"&UST",
+
+"#ALL"
+"Client.Anz	=	6",					;Max. Anzahl Clients
+"App.Anz	=	6",					;Max. Anzahl Applikationen
+
+;------------------------------------------------------------------------------------------------------------------------
+"#BUF"
+"Events=10000"						;Anzahl der Ereignisse proDatentypfürLangzeitpufferung
+"Typ=0"
+
+;------------------------------------------------------------------------------------------------------------------------
+"#TCP",								;Einstellungen für TCP/IP-Treiber
+"Client.Timeout = 6000",			;Überwachungszeit
+"Client.Port = 20001",				;Ethernet-Port
+
+;------------------------------------------------------------------------------------------------------------------------
+"#IEC",								;Einstellungen für IEC-Treiber
+"Line=0		IF = IF6.ST1.IF1	MODE =  '/PHY=RS485 /BD=9600 /PA=E /DB=8 /SB=1'"		;Schnittstellenparameter
+"Timeout	=	250",				;Überwachungszeit Telegramempfang (in ms)
+"Retry.Anz	=	3",					;Wiederholungen bei Telegrammfehlern
+"Conn.Anz	=	5",					;Anzahl Anmeldeversuche
+"Wait.Intv	= 	60000",				;Wartezeit für Anmeldeversuch (in ms)
+"Time.Ts	=   3600000",			;Zeitsyncronisation	(in ms)
+"Cmd.Enable	=	1",					;Freigabe Kommandos senden
+"Cmd.Timeout=	20000",				;Timeout Empfang von Kommando Rückmeldetelegrammen 
+
+;------------------------------------------------------------------------------------------------------------------------
+"#L2DP",							;Einstellungen für Profibus-L2DP-Treiber
+"Line=0	IF = SS1.IF1 CFG=dpm_099"			; Steckplatz für EX450 / Feldbuskonfiguration
+"Timeout	=	1000",				;Überwachungszeit Telegramempfang (in ms)	=1s
+"IntvlGrp1	=	1000",				;Zyklus Intervall-Gruppe 1 (in ms)			=1s
+"IntvlGrp2	=	60000",				;Zyklus Intervall-Gruppe 2 (in ms)			=1min
+
+;------------------------------------------------------------------------------------------------------------------------
+"#VIS"								;Einstellungen für Bedientableau
+"Ust.Nr		= 	999",				;Stationsnummer
+"Ust.Name	= 	DbsTest",		;Stationsname
+;"Ust.IF 	= 	SS1.IF1"			;Schnittstellenparameter für Tableau Büro
+"Ust.IF 	= 	SL4.SS1.IF1"		;Schnittstellenparameter für Tableau BMW
+
+;"Grp=1	Name=	SS1_Allgemein"
+
+"TList=1 T0=aus T1=ein"
+"TList=2 T0=inaktiv T1=aktiv"
+"TList=3 T0=<<< T1=aus T2=ein T3=>>>"
+;------------------------------------------------------------------------------------------------------------------------
+"#GPS",								;Einstellungen für Funkuhr
+									;Achtung! Es kann bis zu 15 Minuten dauern, bis die Satellitenuhr die genaue Position der GPS-Antenne bestimmt hat und sich mit den Atomuhren der Satelliten synchronisiert hat.
+"IF.Slot = IF1"				; Schnittstelle für Funkuhr
+"IF.Mode = '/PHY=RS485 /PA=N /DB=8 /SB=1 /BD=19200'"	;Modus für Schnittstelle (zur Zeit nur Typ=1 möglich !)
+"Tel.Typ = 1"; Meinberg Standard-Zeittelegramm: 				<STX>D:tt.mm.jj;T:w;U:hh.mm.ss;uvxy<ETX>
+"Sync.Intv = 1"; Synchronisationsintervall in Minuten
+"Tel.Timeout = 30"; Anzahl der Sekunden, nach der einmal eine Warnmeldung erfolgt, wenn kein neues Telegramm eintrifft.
+"GPS.Err = GPS_Fehler" 				; Name der Variablen eines anderen Tasks, die im Fehlerfall beschrieben wird
+;------------------------------------------------------------------------------------------------------------------------
+
+"$BLOCK",							;Blockdefinitionen für konstante Einträge
+"#L2DP Line=0"; ELen=56 ALen=64 Dev.Typ=UMG"
+"#I/O Inv=0 Quitt=0"
+
+; ---------------------------
+; Datenpunkt-Parametrierungen
+; ---------------------------
+
+
+;"@QUITT"					;Quittierdatenpunkt
+;"~Quitt"
+;"#ALL Anlage.Nr=1 Typ=QUITT Dp.Nr=1"
+;"#I/O ",
+;"#VIS ",
+
+;"@KPOS",				;
+;"~kpos"
+;"#ALL Anlage.Nr=1 Typ=test Dp.Nr=1"
+;"#I/O"
+;"#VIS Grp=1"
+
+"@IO_7xx0480GSxxx100"
+"~W0110 48.0 GSxxx100 "
+"#ALL Anlage.Nr=1 Typ=SM Dp.Nr=01"
+"#I/O"
+"#VIS Grp=1"
+
+; ---------------------------
+
+"@MW_7010480MSA01K01"
+"~W0110 48.0 MSA01K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=01"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7010480MSA01K02"
+"~W0110 48.0 MSA01K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=01"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7020480MSA02K01"
+"~W0110 48.0 MSA02K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=02"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7020480MSA02K02"
+"~W0110 48.0 MSA02K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=02"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7030480MSA03K01"
+"~W0110 48.0 MSA03K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=03"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7030480MSA03K02"
+"~W0110 48.0 MSA03K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=03"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7040480MSA04K01"
+"~W0110 48.0 MSA04K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=04"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7040480MSA04K02"
+"~W0110 48.0 MSA04K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=04"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7050480MSA05K01"
+"~W0110 48.0 MSA05K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=05"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7050480MSA05K02"
+"~W0110 48.0 MSA05K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=05"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7060480MSA06K01"
+"~W0110 48.0 MSA06K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=06"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7060480MSA06K02"
+"~W0110 48.0 MSA06K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=06"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7070480MSA07K01"
+"~W0110 48.0 MSA07K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=07"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7070480MSA07K02"
+"~W0110 48.0 MSA07K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=07"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7080480MSA08K01"
+"~W0110 48.0 MSA08K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=08"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7080480MSA08K02"
+"~W0110 48.0 MSA08K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=08"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7100480MSA10K01"
+"~W0110 48.0 MSA10K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=10"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7100480MSA10K02"
+"~W0110 48.0 MSA10K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=10"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7120480MSA12K01"
+"~W0110 48.0 MSA12K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=12"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7120480MSA12K02"
+"~W0110 48.0 MSA12K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=12"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7140480MSA14K01"
+"~W0110 48.0 MSA14K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=14"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7140480MSA14K02"
+"~W0110 48.0 MSA14K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=14"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7160480MSA16K01"
+"~W0110 48.0 MSA16K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=16"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7160480MSA16K02"
+"~W0110 48.0 MSA16K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=16"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7180480MSA18K01"
+"~W0110 48.0 MSA18K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=18"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7180480MSA18K02"
+"~W0110 48.0 MSA18K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=18"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7190480MSA19K01"
+"~W0110 48.0 MSA19K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=19"
+"#I/O"
+"#VIS Grp=2"
+
+"@MW_7190480MSA19K02"
+"~W0110 48.0 MSA19K02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=19"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7500480MSA02K01"
+"~W0110 48.0 MSA02K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=20"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7600480MSA01K01"
+"~W0110 48.0 MSA01K01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=21"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7xx0480MSAxxNOT"
+"~W0110 48.0 MSAxxNOT "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=22"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7xx0480MSAxxT01"
+"~W0110 48.0 MSAxxT01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=23"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7xx0480MSAxxT02"
+"~W0110 48.0 MSAxxT02 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=24"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7xx0480MSAxxT03"
+"~W0110 48.0 MSAxxT03 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=25"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7xx0480MSAxxT04"
+"~W0110 48.0 MSAxxT04 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=26"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7xx0480MSAxxTEB"
+"~W0110 48.0 MSAxxTEB "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=27"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7xx0480MSAxxK01"
+"~W0110 48.0 MSAxxK01 "
+"#ALL Anlage.Nr=1 Typ=MW Dp.Nr=28"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@MW_7xx0480MSAxxK02"
+"~W0110 48.0 MSAxxK02 "
+"#ALL Anlage.Nr=2 Typ=MW Dp.Nr=20"
+"#I/O"
+"#VIS Grp=2"
+
+; ---------------------------
+
+"@SPS_7xx0480MSAxxxxxA"
+"~W0110 48.0 MSAxxxxx "
+"#ALL Anlage.Nr=1 Typ=SPS Dp.Nr=01"
+"#I/O"
+"#VIS Grp=3"
+
+;--------------------------------------------------------------------------------------
+;Feldleitgeräte
+"@ABB_015001_MSN01104",				;
+"~MSN01104" 									; optionaler Klartext
+"#ALL Anlage.Nr=1 Typ=ABB_REF542plus Dp.Nr=1"	; Allgemeine Beschreibung
+"#IEC Dev.Adr=104 Line=0 Tsync=1"				; IEC Parametrierung
+
+;--------------------------------------------------------------------------------------
+;Sammelschiene 1
+
+"@IO_014001_GSx01100"
+"~GSx01100"
+"#ALL Anlage.Nr=1 Typ=ALLGMEIN Dp.Nr=01"
+"#I/O"
+"#VIS Grp=1"
+
+
+;--------------------------------------------------------------------------------------
+;Universalmessgeräte SS1
+;"@UMG_013001_USV01100A"
+;"~USV01100A"
+;"#ALL Anlage.Nr=1 Typ=GSD Dp.Nr=1"
+;"#L2DP Dev.Adr=5 Dev.Typ=GSD EAdr=0 Elen=22"
+;"#VIS Grp=2"
+
+;"@UMG_013001_USV01100A"
+;"~USV01100A"
+;"#ALL Anlage.Nr=1 Typ=UMG96 Dp.Nr=1"
+;"#L2DP Dev.Adr=1 Dev.Typ=UMGProf EAdr=0 Elen=124 AAdr=0 Alen=2"
+;"#VIS Grp=2"
+
+"@UMG_013001_USV01100A"
+"~USV01100A"
+"#ALL Anlage.Nr=1 Typ=UMG503 Dp.Nr=1"
+"#L2DP Line=0 Dev.Adr=1 Dev.Typ=UMG EAdr=0 Elen=56 AAdr=0 Alen=64"
+"#VIS Grp=2"
+

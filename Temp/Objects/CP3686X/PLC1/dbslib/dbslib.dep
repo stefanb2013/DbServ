@@ -1,0 +1,5 @@
+$(AS_PROJECT_PATH)/Logical/DbServ-Basis/dbslib/dbslib.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/sys_lib/sys_lib.typ
+$(AS_PROJECT_PATH)/Logical/DbServ-Basis/dbslib/dbslib.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/sys_lib/sys_lib.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/FileIO/FileIO.fun
