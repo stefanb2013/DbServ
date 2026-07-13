@@ -1,8 +1,0 @@
-{
-  global:
-    IEC103Ut_WrCmd;
-    IEC103Ut_WrSimplePV;
-    IEC103Ut_RdSimplePV;
-  local:
-    *;
- };

@@ -1,7 +1,0 @@
-$(AS_PROJECT_PATH)/Logical/Libraries/FileIO/FileIO.fun
-$(AS_PROJECT_PATH)/Logical/Libraries/sys_lib/sys_lib.fun
-$(AS_PROJECT_PATH)/Logical/DbServ-Basis/dbsevent/eventaprol.c
-$(AS_PROJECT_PATH)/Logical/GlobalIncludes/eventaprol.h
-$(AS_PROJECT_PATH)/Logical/Libraries/sys_lib/sys_lib.typ
-$(AS_PROJECT_PATH)/Logical/GlobalIncludes/dbserv.h
-$(AS_PROJECT_PATH)/Logical/Libraries/FileIO/FileIO.var
